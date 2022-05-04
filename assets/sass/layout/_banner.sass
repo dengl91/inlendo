@@ -1,0 +1,138 @@
+// 
+// Theme Name: New Clean Template
+// _banner.sass
+//
+// app/sass/layout/
+//
+
+.banner
+    height: 100vh
+    min-height: 800px
+    color: #fff
+    background: url(../img/main__bg.png) no-repeat 50%
+    background-size: cover
+    padding: 100px 0 40px 0
+    margin: 0
+    position: relative
+    &::after
+        content: ''
+        width: calc(50vw + 164px)
+        height: 100%
+        background: linear-gradient(135deg, #000, #0000001a)
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 1
+        pointer-events: none !important
+    &__content
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        position: relative
+        z-index: 2
+    h1
+        font-family: 'Poppins', sans-serif
+        font-size: 56px
+        line-height: 80px
+        margin: 0 0 24px 0
+        span
+            color: var(--green)
+    h3
+        font-size: 24px
+        font-weight: 400
+        margin: 0 0 40px 0
+        opacity: 0.8
+    .btns
+        margin: 0 0 44px 0
+    &__counter
+        font-family: 'Poppins', sans-serif
+        font-size: 56px
+        color: var(--green__pale)
+        margin: 0 0 10px 0
+    &__hint
+        font-size: 24px
+        color: var(--green__pale)
+        opacity: 0.8
+    &__cards
+        height: 100%
+        display: flex
+        align-items: center
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 3
+        pointer-events: none !important
+    .card
+        min-width: 260px
+        &:first-child
+            transform: rotate(-20deg)
+            z-index: 1
+            animation: Up 6s infinite
+        &:last-child
+            transform: rotate(20deg)
+            animation: UpS 6s infinite
+    .btn
+        &--big
+            background: linear-gradient(135deg, var(--blue), var(--green))
+
+@keyframes Up
+    0%
+        transform: translateY(-40px) rotate(-20deg)
+    50%
+        transform: translateY(40px) rotate(-20deg)
+    100%
+        transform: translateY(-40px) rotate(-20deg)
+
+@keyframes UpS
+    0%
+        transform: translateY(40px) rotate(20deg)
+    50%
+        transform: translateY(-40px) rotate(20deg)
+    100%
+        transform: translateY(40px) rotate(20deg)
+
+@media (max-width: 1440px)
+    .banner
+        &__cards
+            max-width: 50vw
+            right: 4vw
+            transform: scale(0.75)
+
+@media (max-width: 992px)
+    .banner
+        min-height: 700px
+        overflow: hidden
+        h1
+            font-size: 40px
+            line-height: 48px
+        h3
+            font-size: 16px
+            line-height: 24px
+        &__counter
+            font-size: 32px
+        &__hint
+            font-size: 16px
+        &__cards
+            transform: translateY(-10%) scale(0.6)
+        .btns
+            margin: 0 0 24px 0
+
+@media (max-width: 768px)
+    .banner
+        height: auto
+        &::after
+            width: 100vw
+        &__content
+            padding: 40px 20px
+        &__cards
+            max-width: 100%
+            position: unset
+            transform: none
+        .btns
+            flex-direction: column
+            :first-child
+                margin: 0 0 16px 0
+        .btn
+            text-align: center
+            margin: 0 0 16px 0

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inlendo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="node_modules/air-datepicker/air-datepicker.css"> <!-- temporary implementation -->
+    <link rel="stylesheet" href="assets/css/common.css">
+
+    <script src="node_modules/air-datepicker/air-datepicker.js"></script> <!-- temporary implementation -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="container">
+            <strong>€</strong>10,000.00
+            &nbsp;
+            &nbsp;
+            James Hutchinson, EU095714 (Investor)
+        </div>
+    </div>
+
+    <header class="header simple">
+        <div class="container">
+            <a href="/">
+                <img src="assets/img/logo-dark.svg" alt="Inlendo">
+                <nav>
+                    <a href="" class="active">Dashboard</a>
+                    <a href="">Invest</a>
+                    <a href="">My projects</a>
+                    <a href="">My finances</a>
+                    <a href="">Deposit/Withdraw</a>
+                    <div class="header__submenu">
+                        <span class="header__btn">
+                            <img src="assets/img/icons/mail.svg">
+                        </span>
+                        <span class="header__btn">
+                            <img src="assets/img/icons/bell.svg">
+                        </span>
+                        <span class="header__btn header__btn--lang">EN</span>
+                    </div>
+                </nav>
+                <div class="menu">
+                    <div class="menu__item"></div>
+                    <div class="menu__item"></div>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="invest__content">
+                <div class="invest__wrap">
+                    <h2>Vegan sweets production</h2>
+                    <div class="line__wrap">
+                        <div class="line__line"></div>
+                    </div>
+                    <div class="invest__total">29% invested</div>
+                </div>
+                <a href="" class="btn btn--big">Invest</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="dashboard">
+        <div class="container">
+            <h2>Dashboard</h2>
+            <div class="dash__wrap">
+                <div class="dash__item">
+                    <div class="dash__header">
+                        <div class="dash__img">
+                            <img src="assets/img/icons/coin.svg">
+                        </div>
+                        <div class="dash__title">Account<br> Information</div>
+                    </div>
+                    <div class="dash__price">€10,000</div>
+                    <div class="dash__hint">Avaliable balance</div>
+                    <a href="" class="dash__btn">More info</a>
+                </div>
+                <div class="dash__item">
+                    <div class="dash__header">
+                        <div class="dash__img">
+                            <img src="assets/img/icons/income.svg">
+                        </div>
+                        <div class="dash__title">Income<br> and Costs</div>
+                    </div>
+                    <div class="dash__price">€1,275</div>
+                    <div class="dash__hint">Annual return</div>
+                    <a href="" class="dash__btn">More info</a>
+                </div>
+                <div class="dash__item">
+                    <div class="dash__header">
+                        <div class="dash__img">
+                            <img src="assets/img/icons/investment.svg">
+                        </div>
+                        <div class="dash__title">Investment<br> Statistics</div>
+                    </div>
+                    <div class="dash__price">14</div>
+                    <div class="dash__hint">Total portfolio</div>
+                    <a href="" class="dash__btn">More info</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dashboard">
+        <div class="container">
+            <h2>Account Status</h2>
+            <div class="invest__content">
+                <div class="invest__wrap">
+                    <h2>KYC</h2>
+                    <div class="invest__total">Your KYC information has to be updated</div>
+                </div>
+                <a href="" class="btn btn--big">Update KYC</a>
+            </div>
+            <div class="invest__content">
+                <div class="invest__wrap">
+                    <h2>Sustainability & Appropriateness test</h2>
+                    <div class="invest__total">Please complete Sustainability & Appropriateness test, to be able to invest on our platform</div>
+                </div>
+                <a href="" class="btn btn--big">Take assesment</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="earn">
+        <div class="container">
+            <h2>Earnings</h2>
+            <h4>Earnings chart & payment calendar</h4>
+            <div class="earn__wrap">
+                <div class="earn__item">
+                    <div class="earn__tabs">
+                        <div class="earn__tab active" data-nav="null">This Week</div>
+                        <div class="earn__tab" data-nav="null">Future</div>
+                        <div class="earn__tab" data-nav="null">All Time</div>
+                    </div>
+                    <img src="assets/img/graph.svg" class="earn__graph">
+                </div>
+                <div class="earn__item">
+                    <div class="earn__datepicker"></div>
+                </div>
+            </div>
+            <a href="" class="earn__btn">Show more</a>
+        </div>
+    </section>
+
+    <section class="offers">
+        <div class="container">
+            <h2>Actual Offers</h2>
+            <h4>Our current investment projects</h4>
+            <div class="offers__wrap">
+                <div class="card">
+                    <div class="card__img">
+                        <img src="assets/img/card__img.png" alt="Card">
+                    </div>
+                    <div class="card__header">
+                        <div class="card__flex">
+                            <div class="card__id"><span>id</span>00259</div>
+                            <div class="card__class">B1</div>
+                        </div>
+                        <div class="card__title">Vegan sweets production</div>
+                    </div>
+                    <div class="card__flex">
+                        <div class="card__price">
+                            <div class="card__price-main">€22,710</div>
+                            <div class="card__price-secondary">30% out of €150,000</div>
+                        </div>
+                        <div class="card__round">
+                            <svg class="card__progress" width="92" height="92">
+                                <circle class="ready__circle" stroke="#468aff" stroke-width="8" stroke-dasharray="300" fill="transparent" stroke-linecap="round" r="42" cx="46" cy="46"></circle>
+                            </svg>
+                            <div class="card__rate"><span>20%</span>left</div>
+                        </div>
+                    </div>
+                    <div class="card__flex card__rates">
+                        <div class="card__rate"><span>14%</span>rate</div>
+                        <div class="card__rate"><span>24 month</span>Term</div>
+                        <div class="card__rate"><span>15</span>Days left</div>
+                    </div>
+                    <div class="card__btn">
+                        <a class="btn">More info</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__img">
+                        <img src="assets/img/card__img--alt.png" alt="Card">
+                    </div>
+                    <div class="card__header">
+                        <div class="card__flex">
+                            <div class="card__id"><span>id</span>00259</div>
+                            <div class="card__class">B1</div>
+                        </div>
+                        <div class="card__title">Vegan sweets production</div>
+                    </div>
+                    <div class="card__flex">
+                        <div class="card__price">
+                            <div class="card__price-main">€22,710</div>
+                            <div class="card__price-secondary">30% out of €150,000</div>
+                        </div>
+                        <div class="card__round">
+                            <svg class="card__progress" width="92" height="92">
+                                <circle class="ready__circle" stroke="#468aff" stroke-width="8" stroke-dasharray="300" fill="transparent" stroke-linecap="round" r="42" cx="46" cy="46"></circle>
+                            </svg>
+                            <div class="card__rate"><span>20%</span>left</div>
+                        </div>
+                    </div>
+                    <div class="card__flex card__rates">
+                        <div class="card__rate"><span>14%</span>rate</div>
+                        <div class="card__rate"><span>24 month</span>Term</div>
+                        <div class="card__rate"><span>15</span>Days left</div>
+                    </div>
+                    <div class="card__btn">
+                        <a class="btn">More info</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__img">
+                        <img src="assets/img/card__img.png" alt="Card">
+                    </div>
+                    <div class="card__header">
+                        <div class="card__flex">
+                            <div class="card__id"><span>id</span>00259</div>
+                            <div class="card__class">B1</div>
+                        </div>
+                        <div class="card__title">Vegan sweets production</div>
+                    </div>
+                    <div class="card__flex">
+                        <div class="card__price">
+                            <div class="card__price-main">€22,710</div>
+                            <div class="card__price-secondary">30% out of €150,000</div>
+                        </div>
+                        <div class="card__round">
+                            <svg class="card__progress" width="92" height="92">
+                                <circle class="ready__circle" stroke="#468aff" stroke-width="8" stroke-dasharray="300" fill="transparent" stroke-linecap="round" r="42" cx="46" cy="46"></circle>
+                            </svg>
+                            <div class="card__rate"><span>20%</span>left</div>
+                        </div>
+                    </div>
+                    <div class="card__flex card__rates">
+                        <div class="card__rate"><span>14%</span>rate</div>
+                        <div class="card__rate"><span>24 month</span>Term</div>
+                        <div class="card__rate"><span>15</span>Days left</div>
+                    </div>
+                    <div class="card__btn">
+                        <a class="btn">More info</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__img">
+                        <img src="assets/img/card__img.png" alt="Card">
+                    </div>
+                    <div class="card__header">
+                        <div class="card__flex">
+                            <div class="card__id"><span>id</span>00259</div>
+                            <div class="card__class">B1</div>
+                        </div>
+                        <div class="card__title">Vegan sweets production</div>
+                    </div>
+                    <div class="card__flex">
+                        <div class="card__price">
+                            <div class="card__price-main">€22,710</div>
+                            <div class="card__price-secondary">30% out of €150,000</div>
+                        </div>
+                        <div class="card__round">
+                            <svg class="card__progress" width="92" height="92">
+                                <circle class="ready__circle" stroke="#468aff" stroke-width="8" stroke-dasharray="300" fill="transparent" stroke-linecap="round" r="42" cx="46" cy="46"></circle>
+                            </svg>
+                            <div class="card__rate"><span>20%</span>left</div>
+                        </div>
+                    </div>
+                    <div class="card__flex card__rates">
+                        <div class="card__rate"><span>14%</span>rate</div>
+                        <div class="card__rate"><span>24 month</span>Term</div>
+                        <div class="card__rate"><span>15</span>Days left</div>
+                    </div>
+                    <div class="card__btn">
+                        <a class="btn">More info</a>
+                    </div>
+                </div>
+            </div>
+            <a href="" class="offers__btn">Show more</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <h3>Subscribe to our newsletter</h3>
+            <div class="form__wrap">
+                <form class="form subscribe">
+                    <input type="text" name="email" placeholder="Enter your email">
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+            <div class="footer__sep"></div>
+            <div class="footer__row">
+                <div class="footer__col">
+                    <img src="assets/img/logo__element.svg" class="footer__logo" alt="Inlendo">
+                </div>
+                <div class="footer__col">
+                    <div class="footer__title">Inlendo</div>
+                    <a href="" class="footer__link">About us</a>
+                    <a href="" class="footer__link">Loan originators</a>
+                    <a href="" class="footer__link">Blog</a>
+                    <a href="" class="footer__link">News & updates</a>
+                    <a href="" class="footer__link">Annual reports</a>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__title">Legal</div>
+                    <a href="" class="footer__link">User terms</a>
+                    <a href="" class="footer__link">Privacy policy</a>
+                    <a href="" class="footer__link">General loan terms</a>
+                    <a href="" class="footer__link">Cookie policy</a>
+                    <a href="" class="footer__link">Policy of avoidance</a>
+                    <a href="" class="footer__link">Investor risk statement</a>
+                    <a href="" class="footer__link">Lemon Way - T&C</a>
+                    <a href="" class="footer__link">Legal opinion</a>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__title">Help Center</div>
+                    <a href="" class="footer__link">FAQ</a>
+                    <a href="" class="footer__link">Privacy policy</a>
+                    <a href="" class="footer__link">General loan terms</a>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__title">Company details</div>
+                    <a href="" class="footer__link">Legal address:</a>
+                    <span class="footer__link">Registration number</span>
+                </div>
+            </div>
+            <div class="footer__sep"></div>
+            <div class="footer__text">
+                <b>Payment operator</b><br>
+                Partner of <a href="">Lemon Way</a>, a European payment institution accredited in France by the ACPR (CIB 16568).<br>
+                <img src="assets/img/lemonway.svg" alt="Lemonway">
+            </div>
+            <div class="footer__sep"></div>
+            <div class="footer__row">
+                Copyright © Inlendo 2022
+                <div class="footer__socials">
+                    <a href="" class="footer__social">
+                        <img src="assets/img/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="" class="footer__social">
+                        <img src="assets/img/facebook.svg" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        new AirDatepicker('.earn__datepicker', {
+            inline: true
+        })
+
+        $( document ).ready(function() {
+            $('[data-control]').on('click', function() {
+                let target = $(this).data('control');
+                $('.' + target).toggleClass('active');
+            });
+            $('[data-nav]').on('click', function() {
+                $(this).addClass('active').siblings().removeClass('active');
+                let index = $(this).index();
+                let target = $(this).data('nav');
+                $('.' + target).removeClass('active');
+                $('.' + target).eq(index).addClass('active');
+            });
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+// 
+// Theme Name: New Clean Template
+// _homepage.sass
+//
+// app/sass/layout/
+//
+
+.invest
+    color: #fff
+    background: url(../img/invest__bg.svg) no-repeat 50%
+    background-size: cover
+    padding: 48px 0
+    transition: 0.3s
+    &.active
+        background: url(../img/invest__bg--alt.svg) no-repeat 50%
+        background-size: cover
+    h2
+        font-family: 'Lora', serif
+        font-size: 24px
+        font-weight: 400
+        line-height: normal
+        margin: 0 0 16px 0
+    h3
+        font-family: 'Poppins', sans-serif
+        font-size: 48px
+        line-height: 64px
+        margin: 0 0 32px 0
+
+.how-it-works
+    &__img
+        max-width: 100%
+        margin: 0 auto 48px auto
+
+.freedom
+    background: linear-gradient(135deg, #0F9CE2, #652E92)
+    padding: 48px 0
+    margin: 48px 0 0 0
+    h2
+        font-size: 40px
+        color: #fff
+        margin: 0 0 40px 0
+
+.together
+    color: #fff
+    background: url(../img/invest__bg.svg) no-repeat 50%
+    background-size: cover
+    padding: 48px 0
+    margin: 0 0 48px 0
+    &__img
+        margin: 0 auto 48px auto
+        display: block
+    &__description
+        max-width: 720px
+        line-height: 24px
+        margin: 0 auto
+
+@media (max-width: 768px)
+    .invest
+        h3
+            font-size: 24px
+            line-height: 32px
+            margin: 0 0 24px 0
+
+    .freedom
+        h2
+            font-size: 24px
+            line-height: 32px
+            margin: 0 0 24px 0
+
+    .together
+        margin: 0 0 32px 0

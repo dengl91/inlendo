@@ -1,0 +1,725 @@
+// 
+// Theme Name: New Clean Template
+// _components.sass
+//
+// app/sass/layout/
+//
+
+.btn
+    font-family: 'Poppins', sans-serif
+    color: #fff
+    font-weight: 600
+    line-height: 36px
+    white-space: nowrap
+    background: var(--blue)
+    border: 2px solid var(--blue)
+    border-radius: var(--btn__radius)
+    padding: 0 36px
+    transition: 0.3s
+    cursor: pointer
+    &:hover
+        background: var(--green)
+        border-color: var(--green)
+    &--stroke
+        color: var(--purple__deep)
+        background: none
+        border: 2px solid var(--purple__deep)
+        transition: background 0.3s
+        &:hover
+            color: #fff
+            line-height: 40px
+            background: linear-gradient(90deg, var(--blue), var(--green))
+            border: 0px solid var(--blue)
+            padding: 0 38px
+    &--big
+        line-height: 64px
+        background: var(--blue)
+        border: none
+        border-radius: 42px
+        padding: 0 46px
+        transition: 0.4s
+        &:hover
+            background: linear-gradient(135deg, var(--green), var(--green))
+            border: none
+        &.alt
+            line-height: 60px
+            background: none
+            border: 2px solid var(--green__light)
+            transition: none
+            &:hover
+                line-height: 64px
+                background: linear-gradient(135deg, var(--blue), var(--green))
+                border: none
+                padding: 0 48px
+    &--grad
+        background: linear-gradient(135deg, var(--blue), var(--green))
+    &__wrap
+        display: flex
+        justify-content: center
+
+.btns
+    display: flex
+    :first-child
+        margin: var(--btn__offset)
+
+.card
+    font-size: 14px
+    color: #7f7f7f
+    background: #fff
+    border-radius: 20px
+    box-shadow: 0 10px 10px #00000040
+    padding: 15px
+    overflow: hidden
+    &__slider
+        max-width: 980px
+        display: flex
+        margin: 0 auto 48px auto
+    &__img
+        height: 258px
+        margin: -15px
+        position: relative
+        &::after
+            content: ''
+            width: 100%
+            height: 100%
+            background: linear-gradient(0deg, #2FA9CEe6, #2FA9CE00)
+            position: absolute
+            top: 0
+            left: 0
+    &__flex
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__header
+        color: #fff
+        margin: -60px 0 20px 0
+        position: relative
+        z-index: 3
+    &__id
+        font-size: 20px
+        line-height: 32px
+        span
+            font-weight: 700
+            margin: 0 8px 0 0
+    &__class
+        font-size: 20px
+    &__price-main
+        font-family: 'Poppins', sans-serif
+        font-size: 32px
+        font-weight: 700
+        background: linear-gradient(135deg, var(--blue), var(--green))
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+    &__round
+        height: 92px
+        border-radius: 50%
+        box-shadow: 0 0 0 8px #EFF0F6 inset
+        position: relative
+        [class$=rate]
+            width: 100%
+            position: absolute
+            top: 30px
+            left: 0
+    &__progress
+        stroke-dashoffset: 230
+        transform: rotate(270deg) rotateX(180deg)
+    &__rates
+        font-size: 16px
+        margin: 30px 0
+    &__rate
+        text-align: center
+        span
+            color: var(--text)
+            font-weight: 600
+            display: block
+    &__btn
+        .btn
+            text-align: center
+            display: block
+
+.tab
+    &__navs
+        display: flex
+        justify-content: center
+        margin: 0 0 48px 0
+    &__navc
+        background: var(--gray)
+        border-radius: 32px
+        display: flex
+    &__nav
+        font-family: 'Poppins', sans-serif
+        color: #B0B0B0
+        font-weight: 600
+        line-height: 64px
+        letter-spacing: 0.05em
+        background: var(--gray)
+        padding: 0 48px
+        cursor: pointer
+        &:first-child
+            border-radius: 32px 0 0 32px
+        &:last-child
+            border-radius: 0 32px 32px 0
+            &.active
+                background: var(--green)
+        &.active
+            color: #fff
+            background: var(--blue)
+            border-radius: 32px
+    &__item
+        max-width: 600px
+        margin: 0 auto
+        display: none
+        &.active
+            display: block
+        h2
+            text-align: left
+
+.blog
+    &__item
+        background: #fff
+        border-radius: 20px
+        box-shadow: 0 10px 10px #00000040
+        padding: 15px
+        overflow: hidden
+    &__img
+        height: 258px
+        margin: -15px
+    &__date
+        font-size: 12px
+        color: var(--blue)
+        margin: 30px 0 0 0
+    &__title
+        font-family: 'Poppins', sans-serif
+        font-size: 24px
+        font-weight: 700
+        margin: 0 0 15px 0
+    &__description
+        margin: 0 0 20px 0
+    .btn
+        text-align: center
+        display: block
+
+.form
+    &__wrap
+        display: flex
+        justify-content: center
+        margin: 0 0 48px 0
+
+.subscribe
+    width: 100%
+    max-width: 680px
+    background: #fff
+    border-radius: 40px
+    display: flex
+    input
+        &[type=text]
+            width: 100%
+            max-width: 480px
+            font-size: 16px
+            color: var(--gray)
+            line-height: 64px
+            border: none
+            border-radius: 40px
+            padding: 0 40px
+            &::placeholder
+                color: var(--gray)
+            &:focus
+                outline: none
+        &[type=submit]
+            font-size: 16px
+            color: #fff
+            font-weight: 600
+            line-height: 64px
+            letter-spacing: 0.05em
+            background: var(--blue)
+            border: none
+            border-radius: 40px
+            flex-grow: 1
+            padding: 0 20px
+            cursor: pointer
+            -webkit-appearance: none
+            &:hover
+                background: var(--green)
+
+.text
+    &__green
+        font-size: 30px
+        color: var(--green)
+        font-style: italic
+        text-align: center
+
+.content
+    &__row
+        max-width: 1080px
+    &__subtitle
+        font-size: 20px
+        font-weight: 700
+        text-align: center
+        line-height: 30px
+        margin: 0 0 30px 0
+    &__logo
+        margin: 0 auto 80px auto
+        display: block
+    &__text
+        max-width: 420px
+        height: 100%
+        color: var(--text__light)
+        line-height: 24px
+        background: url(../img/text-bg.svg) no-repeat 50% 0%
+        padding: 10px 0
+        :nth-child(4n) &
+            background: url(../img/text2-bg.svg) no-repeat 50% 0%
+        &--about
+            font-size: 21px
+            color: var(--text__green)
+            line-height: 36px
+            display: flex
+            align-items: center
+            padding: 0 0 40px 0
+            opacity: 0
+            transform: translateY(-40px)
+            transition: 0.8s
+            &.animated
+                opacity: 1
+                transform: translateY(0)
+    &__img
+        max-width: 100%
+        height: auto
+        margin: 0 0 40px 0
+
+.about-us__title
+    margin: 60px 0
+
+.principles
+    &__title
+        margin: 0 0 60px 0
+
+.info
+    &__img
+        max-width: 100%
+        height: auto
+        margin: 0 auto 20px auto
+        display: block
+
+.block
+    padding: 48px
+    margin: 0 0 48px 0
+    &--green
+        background: var(--green__light)
+    &__subtitle
+        font-size: 20px
+        font-weight: 700
+        line-height: 30px
+        margin: 0 0 20px 0
+    &__item
+        height: 100%
+        background: var(--green__dark)
+        padding: 32px 24px
+    &__img
+        display: flex
+        margin: 0 0 15px 0
+        img
+            width: 24px
+            height: 24px
+            margin: 0 10px 0 0
+    &__description
+        color: var(--text__light)
+        line-height: 24px
+
+.feature
+    &__item
+        text-align: center
+    &__img
+        width: 100%
+        height: 24px
+        margin: 0 0 10px 0
+        img
+            object-fit: contain
+        .animated &
+            animation: rollIn 1s forwards
+    &__title
+        font-size: 20px
+        font-weight: 700
+        line-height: 1.5
+        margin: 0 0 10px 0
+    &__description
+        max-width: 280px
+        color: var(--text__light)
+        line-height: 24px
+        letter-spacing: 0.02em
+        margin: 0 auto 10px
+        &:last-child
+            margin: 0 auto 30px
+        &.saturated
+            color: var(--text)
+        > a
+            width: fit-content
+            color: var(--text)
+            line-height: 32px
+            background: url(../img/icons/arrow-right.svg) no-repeat top 50% right 6px
+            padding: 0 32px 0 0
+            margin: 20px 0
+            display: block
+            transition: 0.2s linear
+            &:hover
+                background-position: top 50% right 0
+    &__logos
+        margin: 30px 0 0 0
+        img
+            margin: 0 20px 20px 0
+            &:last-child
+                margin: 0 0 20px 0
+
+@keyframes rollIn
+    0%
+        opacity: 0
+        transform: rotate(-30deg) translateX(-20px) scale(1.5)
+    100%
+        opacity: 1
+        transform: rotate(0) translateX(0) scale(1)
+
+.featured
+    &__slide
+        height: auto !important
+        display: flex
+        align-items: center
+        justify-content: center
+        img
+            max-width: 150px
+            height: auto
+
+.ready
+    &__item
+        text-align: center
+        background: url(../img/ready-bg.svg) no-repeat 50% 0%
+        border-right: 1px solid #0000001a
+        padding: 58px 0
+    &__title
+        font-size: 20px
+        font-weight: 700
+        margin: 0 0 10px 0
+    &__description
+        max-width: 280px
+        color: var(--text__light)
+        line-height: 24px
+        margin: 0 auto 52px auto
+    &__link
+        color: #fff
+        font-weight: 700
+        line-height: 48px
+        background: url(../img/icons/arrow-right-w.svg) no-repeat top 50% right 40px var(--main)
+        padding: 0 64px 0 44px
+        display: inline-block
+        cursor: pointer
+        transition: 0.3s
+        &:hover
+            background-position: top 50% right 32px
+            background-color: var(--main__hover)
+        &.animated
+            animation: flowIn 1s forwards
+
+.sector
+    &__item
+        height: 100%
+        color: #fff
+        display: flex
+        flex-direction: column
+        padding: 48px
+        position: relative
+        transition: 0.3s
+        &:hover
+            filter: brightness(1.2)
+        &::after
+            content: ''
+            width: 100%
+            height: 100%
+            background: #00000080
+            position: absolute
+            top: 0
+            left: 0
+        > div
+            position: relative
+            z-index: 1
+    &__title
+        font-size: 48px
+        font-weight: 700
+        margin: 0 0 58px 0
+    &__subtitle
+        font-size: 20px
+        font-weight: 700
+        line-height: 30px
+        margin: 0 0 10px 0
+    &__num
+        font-size: 48px
+        font-weight: 700
+        line-height: 60px
+        margin: auto 0 10px 0
+    &__description
+        font-size: 20px
+        color: var(--text__light--alt)
+        line-height: 30px
+
+.visit
+    &__item
+        text-align: center
+        border-right: 1px solid #0000001a
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding: 30px 0
+    &__img
+        height: 38px
+        text-align: center
+        margin: 0 0 30px 0
+        img
+            max-width: 260px
+            object-fit: contain
+    &__title
+        min-height: 36px
+        font-weight: 700
+        margin: 0 0 52px 0
+    &__description
+        width: 260px
+        color: var(--text__light)
+        line-height: 24px
+        margin: 0 0 20px 0
+
+.step
+    &__item
+        max-width: 268px
+        background: var(--green__dark)
+        padding: 30px 40px
+        margin: 0 auto 100px auto
+    &__num
+        font-size: 30px
+        font-weight: 700
+        line-height: 40px
+        margin: 0 0 10px 0
+    &__title
+        font-weight: 700
+
+.team
+    &__item
+        text-align: center
+        margin: 0 0 58px 0
+        display: block
+        cursor: pointer
+    &__img
+        max-width: 300px
+        background-image: url(../img/team1-bg.svg)
+        background-repeat: no-repeat
+        background-position: 50% 75%
+        background-size: contain
+        margin: 0 auto 20px auto
+        position: relative
+        clip-path: circle(0% at 50% 50%)
+        img
+            width: 75%
+            border-radius: 50%
+            object-fit: contain
+        &--second
+            background-image: url(../img/team2-bg.svg)
+            animation-delay: 0.2s
+        &--third
+            background-image: url(../img/team3-bg.svg)
+            animation-delay: 0.4s
+        &.animated
+            animation-name: roundIn
+            animation-duration: 1.4s
+            animation-fill-mode: forwards
+        &--overlay
+            width: 220px
+            height: 220px
+            background: url(../img/profile-overlay.svg) no-repeat 50%
+            position: absolute
+            top: -20px
+            left: 15px
+    &__title
+        font-size: 20px
+        font-weight: 700
+        line-height: 30px
+        margin: 0 0 8px 0
+    &__position
+        color: var(--text__light)
+        font-style: italic
+        margin: 0 0 10px 0
+    &__description
+        color: var(--text__light)
+        line-height: 24px
+    &__bio
+        color: var(--text__light)
+        line-height: 24px
+
+@keyframes roundIn
+    0%
+        clip-path: circle(0% at 50% 50%)
+    100%
+        clip-path: circle(100.0% at 50% 50%)
+
+.sb
+    &__banner
+        width: 100%
+        height: 468px
+        text-align: center
+        margin: 30px 0
+        img
+            max-width: 100%
+
+.sb-features
+    .container
+        background: url(../img/art-arrow-down.svg) no-repeat 100% 100%
+    &__item
+        background: #F5F9F7
+        padding: 34px 20px
+        margin: 20px 0 0 0
+    &__title
+        min-height: 60px
+        font-size: 18px
+        font-weight: 700
+        text-align: center
+        line-height: 30px
+        margin: 0 0 24px 0
+    &__icon
+        text-align: center
+
+.career
+    &__item
+        text-align: center
+        margin: 0 0 58px 0
+    &__img
+        width: 100%
+        height: 24px
+        margin: 0 0 10px 0
+        img
+            object-fit: contain
+    &__title
+        font-size: 20px
+        font-weight: 700
+        margin: 0 0 10px 0
+    &__description
+        max-width: 280px
+        line-height: 24px
+        margin: 0 auto
+
+.feature
+    &__item
+        .who-u-are &
+            margin: 0 0 58px 0
+    &__title
+        font-size: 18px
+        line-height: 24px
+
+.who-u-are
+    h2
+        margin: 0 0 58px 0
+
+.process
+    &__item
+        background: var(--green__light)
+        padding: 30px 40px
+        margin: 0 0 48px 0
+    &__top
+        display: flex
+        justify-content: space-between
+        margin: 0 0 30px 0
+    &__num
+        font-size: 30px
+        font-weight: 700
+        margin: 0 0 10px 0
+    &__hint
+        font-weight: 700
+    &__time
+        font-weight: 700
+        line-height: 64px
+        background: url(../img/pillow.svg) no-repeat 50%
+        background-size: contain
+        padding: 0 30px
+    &__description
+        min-height: 48px
+        color: var(--text__light)
+        line-height: 24px
+
+.start
+    &__btn
+        width: 260px
+        color: #fff
+        font-weight: 700
+        text-align: center
+        line-height: 58px
+        background: var(--text)
+        margin: 0 auto
+        display: block
+        cursor: pointer
+
+@media (max-width: 992px)
+    .btn
+        line-height: 44px
+        padding: 0 32px
+        &--big
+            &.alt
+                line-height: 40px
+                &:hover
+                    line-height: 44px
+                    padding: 0 34px
+
+    .card
+        border-radius: 10px
+        &__img
+            height: 200px
+        &__price-main
+            font-size: 24px
+
+    .projects
+        .container
+            padding: 0
+
+    .blog
+        .container
+            padding: 0
+        &__img
+            height: 200px
+
+    .sector
+        &__title
+            font-size: 32px
+            margin: 0 0 42px 0
+
+@media (max-width: 768px)
+    .content
+        &__text
+            font-size: 16px
+            line-height: 24px
+            padding: 0 20px
+            margin: 0 0 20px 0
+        &__img
+            margin: 20px 0
+
+    .btn
+        min-width: 200px
+        text-align: center
+        padding: 0 24px
+
+    .btns
+        :first-child
+            margin: 0 10px 0 0
+
+    .card
+        &__slider
+            margin: 0 0 24px 0
+
+    .tab
+        &__nav
+            white-space: nowrap
+            padding: 0 24px
+
+    .blog
+        &__item
+            .btn
+                min-width: unset
+
+    .subscribe
+        input[type=text]
+            line-height: 40px
+            padding: 0 20px
+        input[type=submit]
+            line-height: 40px

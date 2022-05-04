@@ -1,0 +1,393 @@
+// Theme Name: New Clean Template
+// Version: 3.6
+// Tags: clean, development, html5, sass, jquery, slick.js
+// Description: Clean wordpress theme with slick and visible js function
+// Author: DHL
+// Author URI: telegram @dhljob
+//
+
+:root
+    --font-size: 16px
+    --line-height: normal
+    --text: #1a1a1a
+    --text__light: #75807B
+    --text__light--alt: #C7CFCB
+    --blue: #468AFF
+    --blue__pale: #34A2DA
+    --green: #16CB9C
+    --green__pale: #26B6BD
+    --green__light: #1BCCD2
+    --purple: #662D91
+    --purple__deep: #5048A5
+    --btn: &
+    --btn__offset: 0 24px 0 0
+    --btn__radius: 42px
+    --main: #BAAE97
+    --main__hover: #998C74
+    --stroke: #e0e0e0
+    --gray: #D9DBE9
+    --brown: #BAAE97
+    --topbar: #798486
+    --menu: #1a1a1a
+    --footer: #3E4140
+
+$grad: linear-gradient(135deg, var(--blue), var(--green))
+
+html
+    scroll-behavior: smooth
+    
+body
+    font-family: 'Lora', sans-serif
+    font-size: var(--font-size)
+    color: var(--text)
+    line-height: var(--line-height)
+    background: #fff
+    padding: 0
+    margin: 0
+
+hr
+    background-color: #ccc
+    border: 0
+    height: 1px
+    margin-bottom: 1.5em
+a
+    color: inherit
+    text-decoration: none
+*
+    box-sizing: border-box
+
+.container
+    max-width: 1200px
+    height: 100%
+    padding: 0 20px
+    margin: 0 auto
+    position: relative
+
+section
+    margin: 48px 0
+    &.green
+        background: var(--green__light)
+        padding: 100px 0
+        &:first-of-type
+            margin-top: 0
+        &:last-of-type
+            margin-bottom: 0
+
+[class$=img]
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+[data-bg]
+    background-repeat: no-repeat
+    background-position: 50%
+    background-size: cover
+    &.contain
+        background-size: contain
+
+[class^=col]
+    &:last-child
+        [class$=item]
+            border: none
+
+h1
+    font-size: 52px
+    line-height: 60px
+    margin: 0 0 20px 0
+    animation: flowIn 1.4s forwards
+h2
+    font-family: 'Poppins', sans-serif
+    font-size: 56px
+    text-align: center
+    line-height: 80px
+    margin: 0 0 48px 0
+    &.animated
+        animation: flowIn 2s forwards
+    span
+        color: var(--green)
+h3
+    font-size: 30px
+    line-height: 40px
+    margin: 0 0 10px 0
+h4
+    max-width: 780px
+    color: var(--text__light)
+    font-weight: 400
+    text-align: center
+    line-height: 24px
+    letter-spacing: 0.02em
+    margin: 0 auto 64px auto
+    &:last-child
+        margin: 0 auto
+
+ul
+    padding: 0 32px
+    list-style-type: none
+    li
+        line-height: 24px
+        padding: 10px 0
+        position: relative
+        &::after
+            content: ''
+            width: 16px
+            height: 16px
+            background: var(--blue)
+            border-radius: 50%
+            position: absolute
+            top: 15px
+            left: -32px
+
+i
+    font-weight: normal
+
+@keyframes flowIn
+    0%
+        opacity: 0
+        transform: translateY(-10px)
+        clip-path: polygon(0 0, 0 0, 10% 100%, 0% 100%)
+    50%
+        opacity: 1
+    100%
+        opacity: 1
+        transform: translateY(0)
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+
+.slick
+    &-list
+        padding: 20px 10px
+    &-slide
+        margin: 0 10px
+        opacity: 0
+        transition: 0.4s
+        &.slick-active
+            opacity: 1
+    &-next
+        width: 60px
+        height: 60px
+        font-size: 0
+        background: url(../img/arrow__right.svg) no-repeat
+        border: none
+        border-radius: 50%
+        position: absolute
+        top: 50%
+        right: -100px
+        z-index: 3
+        transform: translateY(-50%)
+        cursor: pointer
+        -webkit-appearance: none
+        &:hover
+            filter: brightness(120%) hue-rotate(280deg)
+        &.slick-disabled
+            opacity: 0.5
+            pointer-events: none
+    &-prev
+        width: 60px
+        height: 60px
+        font-size: 0
+        background: url(../img/arrow__left.svg) no-repeat
+        border: none
+        border-radius: 50%
+        position: absolute
+        top: 50%
+        left: -100px
+        z-index: 3
+        transform: translateY(-50%)
+        cursor: pointer
+        -webkit-appearance: none
+        &:hover
+            filter: brightness(120%) hue-rotate(280deg)
+        &.slick-disabled
+            opacity: 0.5
+            pointer-events: none
+
+.footer
+    color: #fff
+    background: url(../img/invest__bg--alt.svg) no-repeat 50%
+    background-size: cover
+    padding: 48px 0
+    &__sep
+        height: 2px
+        background: #ffffff1a
+        margin: 0 0 24px 0
+    &__row
+        display: flex
+        justify-content: space-between
+        margin: 0 0 24px 0
+        &:last-child
+            margin: 0
+    &__col
+        display: flex
+        flex: 1 1 0
+        flex-direction: column
+        padding: 0 20px
+    &__logo
+        max-width: 146px
+    &__title
+        font-family: 'Poppins', sans-serif
+        font-size: 24px
+        font-weight: 700
+        margin: 0 0 10px 0
+    &__link
+        font-size: 14px
+        line-height: 24px
+    h3
+        font-family: 'Poppins', sans-serif
+        font-size: 24px
+        text-align: center
+        margin: 0 0 24px 0
+    &__text
+        font-size: 14px
+        line-height: 24px
+        margin: 0 0 24px 0
+        a
+            font-weight: 600
+            text-decoration: underline
+        img
+            margin: 10px 0
+    &__social
+        margin: 0 8px
+
+.modal
+    width: 100vw
+    height: 100vh
+    background: #00000033
+    position: fixed
+    display: none
+    align-items: center
+    justify-content: center
+    top: 0
+    left: 0
+    z-index: 9
+    backdrop-filter: blur(4px)
+    -webkit-backdrop-filter: blur(4px)
+    &.active
+        display: flex
+    &__container
+        width: 100%
+        max-width: 800px
+        max-height: 92vh
+        background: #fff
+        border-radius: 10px
+        padding: 60px
+        margin: 4vh 0
+        overflow: auto
+        animation: fadeIn 0.4s forwards
+    &__title
+        font-size: 34px
+        font-weight: 600
+        margin: 0 0 10px 0
+    &__subtitle
+        margin: 0 0 30px 0
+        span
+            font-weight: 700
+    &__close
+        width: 24px
+        height: 24px
+        background: url(../img/icons/close.svg) no-repeat 50%
+        position: absolute
+        top: 20px
+        right: 20px
+        transition: 0.3s
+        cursor: pointer
+        &:hover
+            transform: rotate(90deg)
+    [class^=team]
+        text-align: center
+
+@keyframes fadeIn
+    0%
+        opacity: 0
+        transform: scale(0)
+    100%
+        opacity: 1
+        transform: scale(1)
+
+.only
+    &--mobile
+        display: none
+    &--pc
+        display: block
+
+.menu
+    display: none
+
+@media (max-width: 1440px)
+    .slick
+        &-next
+            right: 0
+            opacity: 0.5
+        &-prev
+            left: 0
+            opacity: 0.5
+
+@media (max-width: 992px)
+    .menu
+        width: 42px
+        height: 42px
+        display: block
+        cursor: pointer
+        &__item
+            height: 4px
+            background: #fff
+            border-radius: 4px
+            margin: 8px 0
+            transition: 0.3s
+        &.active
+            :first-child
+                transform: rotate(45deg) translateY(6px)
+            :last-child
+                transform: rotate(-45deg) translateY(-6px)
+
+    h2
+        font-size: 32px
+        line-height: 48px
+        margin: 0 0 32px 0
+
+    .slick
+        &-slide
+            opacity: 1
+
+    .footer
+        &__row
+            flex-wrap: wrap
+        &__col
+            flex: auto
+        &__text
+            padding: 0 20px
+
+@media (max-width: 768px)
+    body
+        font-size: 14px
+        &.unscroll
+            overflow: hidden
+        
+    section
+        margin: 40px 0
+
+    h2
+        font-size: 24px
+
+    .footer
+        &__col
+            margin: 0 0 24px 0
+            &:first-child
+                display: none
+        &__title
+            text-align: center
+
+    .only
+        &--mobile
+            display: block
+        &--pc
+            display: none
+
+ 
+
+@import layout/header
+@import layout/banner
+@import layout/components
+@import layout/homepage
+@import layout/dashboard
+@import datepicker
+
