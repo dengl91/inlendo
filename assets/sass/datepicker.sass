@@ -12,6 +12,17 @@
     background: none
     border: none
     margin: 0 auto
+    position: relative !important
+    &::after
+        content: ""
+        width: 86px
+        height: calc(100% - 48px)
+        background: linear-gradient(135deg, var(--blue), var(--purple__deep))
+        border-radius: 12px
+        position: absolute
+        top: 48px
+        right: 0
+        z-index: -1
 .air-datepicker-nav
     border: none
 .air-datepicker-nav--title
