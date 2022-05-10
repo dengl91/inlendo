@@ -651,6 +651,190 @@
         display: block
         cursor: pointer
 
+.list
+    &__wrap
+        width: 100%
+        display: flex
+    &__content
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        .card
+            width: 31%
+            margin: 0 0 24px 0
+                
+
+.sidebar
+    width: 300px
+    flex: 0 0 300px
+    padding: 0 30px 0 0
+    &__title
+        font-weight: 700
+        margin: 0 0 10px 0
+
+.input
+    &__wrap
+        width: 100%
+        max-width: 100%
+        display: flex
+        margin: 0 0 24px 0
+        input
+            max-width: 128px
+            font-size: 16px
+            font-weight: 700
+            text-align: center
+            line-height: 64px
+            border: none
+            border-radius: 16px
+            box-shadow: 0 4px 10px #00000033
+            padding: 0 10px
+            &:first-child
+                margin: 0 15px 0 0
+
+.select
+    &__wrap
+        line-height: 64px
+        background: #fff
+        border-radius: 16px
+        box-shadow: 0 4px 10px #00000033
+        margin: 0 0 24px 0
+    &__title
+        font-weight: 700
+        background-image: url(../img/arrow__down.svg)
+        background-repeat: no-repeat
+        background-position: top 50% right 28px
+        border-radius: 16px
+        box-shadow: 0 4px 10px #00000033
+        padding: 0 24px
+        cursor: pointer
+        &.active
+            background-image: url(../img/arrow__up.svg)
+            + .select__dropdown
+                max-height: 100%
+    &__all
+        font-weight: 700
+        border-bottom: 2px solid #0D738133
+        padding: 0 24px
+        margin: 0 0 8px 0
+        position: relative
+        cursor: pointer
+        &::after
+            content: ''
+            width: 20px
+            height: 20px
+            background-repeat: no-repeat
+            background-position: 50%
+            border: 2px solid var(--blue)
+            border-radius: 4px
+            position: absolute
+            top: 50%
+            right: 24px
+            transform: translateY(-50%)
+        &:hover
+            &::after
+                border-color: var(--green)
+        &.active
+            &::after
+                background-image: url(../img/check__w.svg), $grad
+                border-color: var(--blue)
+    &__dropdown
+        max-height: 0
+        display: flex
+        flex-direction: column
+        overflow: hidden
+        label
+            font-family: $poppins
+            font-weight: 600
+            line-height: 58px
+            display: none
+            align-items: center
+            justify-content: space-between
+            padding: 0 24px
+            cursor: pointer
+            &:hover
+                input
+                    border: 2px solid var(--green)
+            &:nth-child(2)
+                display: flex
+            &:nth-child(3)
+                display: flex
+            &:nth-child(4)
+                display: flex
+            &:nth-child(5)
+                display: flex
+        &.active
+            label
+                display: flex
+        input
+            width: 24px
+            height: 24px
+            background-repeat: no-repeat
+            background-position: 50%
+            border: 2px solid var(--blue)
+            border-radius: 4px
+            margin: 0
+            cursor: pointer
+            -webkit-appearance: none
+            &:checked
+                background-image: url(../img/check__w.svg), $grad
+                border-color: var(--blue) !important
+    &__btn
+        color: var(--blue)
+        font-weight: 700
+        text-align: center
+        line-height: 36px
+        border: 2px solid var(--blue)
+        border-radius: 40px
+        margin: 16px 24px
+        transition: 0.3s
+        cursor: pointer
+        &:hover
+            color: #fff
+            background: var(--blue)
+
+
+.bignav
+    font-family: $poppins
+    font-size: 32px
+    font-weight: 500
+    padding: 32px 0 58px 0
+    position: relative
+    &::after
+        content: ''
+        width: 100%
+        height: 2px
+        background: linear-gradient(135deg, var(--blue), var(--green))
+        position: absolute
+        top: 100%
+        left: 0
+        opacity: 0.5
+    .container
+        display: flex
+        align-items: center
+        justify-content: center
+    &__item
+        color: var(--text__light--alt)
+        padding: 0 24px
+        position: relative
+        &.active
+            color: var(--text)
+            &::after
+                content: ''
+                width: 24px
+                height: 24px
+                background: $grad
+                border-radius: 50%
+                position: absolute
+                top: 110%
+                left: 50%
+                transform: translateX(-50%)
+
+@media (max-width: 1140px)
+    .list
+        &__content
+            .card
+                width: 49%
+
 @media (max-width: 992px)
     .btn
         line-height: 44px
@@ -723,3 +907,57 @@
             padding: 0 20px
         input[type=submit]
             line-height: 40px
+
+    .list
+        &__wrap
+            flex-wrap: wrap
+        &__content
+            .card
+                width: 100%
+                &__img
+                    height: 50vw
+                    min-height: 240px
+
+    .sidebar
+        width: 100%
+        flex: 0 0 100%
+        padding: 0
+        margin: 0 0 24px 0
+        display: none
+        &__showfilters
+            width: 100%
+            color: var(--blue)
+            font-weight: 700
+            text-align: center
+            line-height: 40px
+            border: 2px solid var(--blue)
+            border-radius: 40px
+            margin: 0 0 24px 0
+            cursor: pointer
+            &::before
+                content: ''
+                width: 10px
+                height: 18px
+                background: url(../img/up-n-down.svg) no-repeat 50%
+                margin: 0 10px 0 0
+                display: inline-block
+                transform: translateY(4px)
+            &.active
+                color: #fff
+                line-height: 44px
+                background: $grad
+                border: none
+                &::before
+                    filter: brightness(10)
+                + .sidebar
+                    display: block
+
+    .bignav
+        font-size: 16px
+        text-align: center
+        &__item
+            padding: 0 10px
+            &.active
+                &::after
+                    width: 16px
+                    height: 16px
