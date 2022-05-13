@@ -17,6 +17,8 @@
     --green: #16CB9C
     --green__pale: #26B6BD
     --green__light: #1BCCD2
+    --red: #EB5757
+    --orange: #F2C94C
     --purple: #662D91
     --purple__deep: #5048A5
     --btn: &
@@ -25,7 +27,7 @@
     --main: #BAAE97
     --main__hover: #998C74
     --stroke: #e0e0e0
-    --gray: #D9DBE9
+    --gray: #f2f2f2
     --brown: #BAAE97
     --topbar: #798486
     --menu: #1a1a1a
@@ -121,6 +123,20 @@ h4
     margin: 0 auto 64px auto
     &:last-child
         margin: 0 auto
+
+.tac
+    text-align: center
+
+@media (min-width: 992px)
+    .flex-grow
+        &__15
+            flex: 1.5 1 0 !important
+        &__18
+            flex: 1.8 1 0 !important
+        &__2
+            flex: 2 1 0 !important
+        &__3
+            flex: 3 1 0 !important
 
 ul
     padding: 0 32px

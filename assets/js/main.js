@@ -3,13 +3,16 @@ new AirDatepicker('.earn__datepicker', {
 })
 
 $( document ).ready(function() {
+
     $('[data-control]').on('click', function() {
         let target = $(this).data('control');
         $('.' + target).toggleClass('active');
     });
+
     $('[data-toggle]').on('click', function() {
         $(this).toggleClass('active');
     });
+    
     $('[data-nav]').on('click', function() {
         $(this).addClass('active').siblings().removeClass('active');
         let index = $(this).index();
@@ -41,4 +44,34 @@ $( document ).ready(function() {
         let checked = $(this).closest('.select__dropdown').find('input:checkbox:checked').length;
         $(this).closest('.select__wrap').find('.select__title').text(checked + ' selected');
     });
+
+    $('.filter__item').on('click', function() {
+        let compare = 'asc';
+        if ( $(this).attr('data-sort') == 'asc' ) {
+            compare = 'desc';
+            $(this).attr('data-sort', 'desc').siblings().attr('data-sort', '0');
+        } else {
+            $(this).attr('data-sort', 'asc').siblings().attr('data-sort', '0');
+        }
+        let index = $(this).index();
+        let parse = $(this).data('parse');
+        let result = $('.list__row').sort( (a, b) => {
+            if ( !parse ) {
+                var contentA = parseInt( $(a).find('> div').eq(index).text().replace(/[^0-9]/gi, '') );
+                var contentB = parseInt( $(b).find('> div').eq(index).text().replace(/[^0-9]/gi, '') );
+            } else {
+                var contentA = $(a).find('> div').eq(index).text();
+                var contentB = $(b).find('> div').eq(index).text();
+            }
+            console.log(contentA);
+            if ( compare == 'asc' ) {
+                return (contentA < contentB) ? -1 : (contentA > contentB) ? 1 : 0;
+            } else {
+                return (contentA > contentB) ? -1 : (contentA > contentB) ? 1 : 0;
+            }
+        });
+
+        $('.list__rows').html(result);
+    });
+
 });

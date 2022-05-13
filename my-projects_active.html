@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inlendo - My Projects</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="node_modules/air-datepicker/air-datepicker.css"> <!-- temporary implementation -->
+    <link rel="stylesheet" href="assets/css/common.css">
+
+    <script src="node_modules/air-datepicker/air-datepicker.js"></script> <!-- temporary implementation -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="container">
+            <strong>€</strong>10,000.00
+            &nbsp;
+            &nbsp;
+            James Hutchinson, EU095714 (Investor)
+        </div>
+    </div>
+
+    <header class="header simple">
+        <div class="container">
+            <a href="/">
+                <img src="assets/img/logo-dark.svg" alt="Inlendo">
+                <nav>
+                    <a href="">Dashboard</a>
+                    <a href="">Invest</a>
+                    <a href="" class="active">My projects</a>
+                    <a href="">My finances</a>
+                    <a href="">Deposit/Withdraw</a>
+                    <div class="header__submenu">
+                        <span class="header__btn">
+                            <img src="assets/img/icons/mail.svg">
+                        </span>
+                        <span class="header__btn">
+                            <img src="assets/img/icons/bell.svg">
+                        </span>
+                        <span class="header__btn header__btn--lang">EN</span>
+                    </div>
+                </nav>
+                <div class="menu">
+                    <div class="menu__item"></div>
+                    <div class="menu__item"></div>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <div class="bignav">
+        <div class="container">
+            <a href="my-projects_fundrasing.html" class="bignav__item">Fundrasing</a>
+            <a href="my-projects_active.html" class="bignav__item active">Active</a>
+            <a href="my-projects_finalized.html" class="bignav__item">Finalized</a>
+        </div>
+    </div>
+
+    <section class="main">
+        <div class="container">
+            <div class="list__wrap">
+                <div class="sidebar__showfilters only--mobile" data-toggle>Show Filters</div>
+                <div class="sidebar">
+                    <div class="sidebar__title">Interest Rate</div>
+                    <div class="input__wrap">
+                        <input type="text" placeholder="From (%)">
+                        <input type="text" placeholder="To (%)">
+                    </div>
+                    <div class="sidebar__title">Country</div>
+                    <div class="select__wrap">
+                        <div class="select__title active" data-toggle>1 selected</div>
+                        <div class="select__dropdown">
+                            <div class="select__all">Select all</div>
+                            <label for="1">
+                                Czech Republic
+                                <input type="checkbox" id="1" checked>
+                            </label>
+                            <label for="2">
+                                Kazakhstan
+                                <input type="checkbox" id="2">
+                            </label>
+                            <label for="3">
+                                Lithuania
+                                <input type="checkbox" id="3">
+                            </label>
+                            <label for="4">
+                                Moldova
+                                <input type="checkbox" id="4">
+                            </label>
+                            <label for="5">
+                                Philippines
+                                <input type="checkbox" id="5">
+                            </label>
+                            <label for="6">
+                                Czech Republic
+                                <input type="checkbox" id="6">
+                            </label>
+                            <label for="7">
+                                Kazakhstan
+                                <input type="checkbox" id="7">
+                            </label>
+                            <label for="8">
+                                Lithuania
+                                <input type="checkbox" id="8">
+                            </label>
+                            <div class="select__btn">Show more</div>
+                        </div>
+                    </div>
+                    <div class="sidebar__title">Loan Rating</div>
+                    <div class="select__wrap">
+                        <div class="select__title" data-toggle>3 selected</div>
+                        <div class="select__dropdown">
+                            <div class="select__all">Select all</div>
+                            <label for="o1">
+                                Option 1
+                                <input type="checkbox" id="o1" checked>
+                            </label>
+                            <label for="o2">
+                                Option 2
+                                <input type="checkbox" id="o2" checked>
+                            </label>
+                            <label for="o3">
+                                Option 3
+                                <input type="checkbox" id="o3" checked>
+                            </label>
+                            <label for="o4">
+                                Option 4
+                                <input type="checkbox" id="o4">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sidebar__title">Loan Types</div>
+                    <div class="select__wrap">
+                        <div class="select__title" data-toggle>0 selected</div>
+                        <div class="select__dropdown">
+                            <div class="select__all">Select all</div>
+                            <label for="l1">
+                                Loan 1
+                                <input type="checkbox" id="l1">
+                            </label>
+                            <label for="l2">
+                                Loan 2
+                                <input type="checkbox" id="l2">
+                            </label>
+                            <label for="l3">
+                                Loan 3
+                                <input type="checkbox" id="l3">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="sidebar__title">Loan Statuses</div>
+                    <div class="select__wrap">
+                        <div class="select__title" data-toggle>0 selected</div>
+                        <div class="select__dropdown">
+                            <div class="select__all">Select all</div>
+                            <label for="s1">
+                                Status 1
+                                <input type="checkbox" id="s1">
+                            </label>
+                            <label for="s2">
+                                Status 2
+                                <input type="checkbox" id="s2">
+                            </label>
+                            <label for="s3">
+                                Status 3
+                                <input type="checkbox" id="s3">
+                            </label>
+                            <label for="s4">
+                                Status 4
+                                <input type="checkbox" id="s4">
+                            </label>
+                            <label for="s5">
+                                Status 5
+                                <input type="checkbox" id="s5">
+                            </label>
+                            <label for="s6">
+                                Status 6
+                                <input type="checkbox" id="s6">
+                            </label>
+                            <div class="select__btn">Show more</div>
+                        </div>
+                    </div>
+                    <div class="sidebar__title">Currency Exposure</div>
+                    <div class="select__wrap">
+                        <div class="select__title" data-toggle>0 selected</div>
+                        <div class="select__dropdown">
+                            <div class="select__all">Select all</div>
+                            <label for="c1">
+                                Currency 1
+                                <input type="checkbox" id="c1">
+                            </label>
+                            <label for="c2">
+                                Currency 2
+                                <input type="checkbox" id="c2">
+                            </label>
+                            <label for="c3">
+                                Currency 3
+                                <input type="checkbox" id="c3">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="list__content">
+                    <div class="filter filter--wide">
+                        <div class="filter__item" data-sort="0" data-parse="text">Project</div>
+                        <div class="filter__item flex-grow__3" data-sort="0" data-parse="text">Status</div>
+                        <div class="filter__item" data-sort="0">Investment</div>
+                        <div class="filter__item" data-sort="0">Rate (p.a.)</div>
+                        <div class="filter__item" data-sort="0">Term (days)</div>
+                        <div class="filter__sep flex-grow__18"></div>
+                    </div>
+                    <div class="list__rows">
+                        <div class="list__row list__row--small">
+                            <div class="list__cell" data-title="Project">
+                                <div class="list__cell-wrap">
+                                    <div class="list__cell-img">
+                                        <img src="assets/img/flag.svg" alt="Super coffee UOB">
+                                    </div>
+                                    <div class="list__cell-info">
+                                        <a href="">Super coffee UOB</a>
+                                        <div class="list__cell-project">6228824<span>AA</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list__cell list__cell--md-col flex-grow__3">
+                                Expected day until repayment (80%)
+                                <div class="progress__wrap">
+                                    <div class="progress__line" style="width: 80%;"></div>
+                                </div>
+                                Scheduled date of return in Offer: 16.03.2022
+                            </div>
+                            <div class="list__cell tac" data-title="Investment">€ 4850</div>
+                            <div class="list__cell tac" data-title="Rate (p.a.)">17%</div>
+                            <div class="list__cell tac" data-title="Term (days)">24 days</div>
+                            <a href="" class="list__btn">Stage</a>
+                            <a href="" class="list__btn">Sell</a>
+                        </div>
+                        <div class="list__row list__row--small">
+                            <div class="list__cell" data-title="Project">
+                                <div class="list__cell-wrap">
+                                    <div class="list__cell-img">
+                                        <img src="assets/img/flag.svg" alt="Super coffee UOB">
+                                    </div>
+                                    <div class="list__cell-info">
+                                        <a href="">Abber coffee UOB</a>
+                                        <div class="list__cell-project">8228824<span>AA</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list__cell list__cell--md-col flex-grow__3">
+                                Expected day until repayment (40%)
+                                <div class="progress__wrap">
+                                    <div class="progress__line" style="width: 40%;"></div>
+                                </div>
+                                Scheduled date of return in Offer: 14.03.2022
+                            </div>
+                            <div class="list__cell tac" data-title="Investment">€ 3850</div>
+                            <div class="list__cell tac" data-title="Rate (p.a.)">18%</div>
+                            <div class="list__cell tac" data-title="Term (days)">21 days</div>
+                            <a href="" class="list__btn">Stage</a>
+                            <a href="" class="list__btn">Sell</a>
+                        </div>
+                        <div class="list__row list__row--small">
+                            <div class="list__cell" data-title="Project">
+                                <div class="list__cell-wrap">
+                                    <div class="list__cell-img">
+                                        <img src="assets/img/flag.svg" alt="Super coffee UOB">
+                                    </div>
+                                    <div class="list__cell-info">
+                                        <a href="">Baber coffee UOB</a>
+                                        <div class="list__cell-project">1228824<span>AA</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list__cell list__cell--md-col flex-grow__3">
+                                Expected day until repayment (20%)
+                                <div class="progress__wrap">
+                                    <div class="progress__line" style="width: 20%;"></div>
+                                </div>
+                                Scheduled date of return in Offer: 12.03.2022
+                            </div>
+                            <div class="list__cell tac" data-title="Investment">€ 8850</div>
+                            <div class="list__cell tac" data-title="Rate (p.a.)">24%</div>
+                            <div class="list__cell tac" data-title="Term (days)">24 days</div>
+                            <a href="" class="list__btn">Stage</a>
+                            <a href="" class="list__btn">Sell</a>
+                        </div>
+                        <div class="list__row list__row--small">
+                            <div class="list__cell" data-title="Project">
+                                <div class="list__cell-wrap">
+                                    <div class="list__cell-img">
+                                        <img src="assets/img/flag.svg" alt="Super coffee UOB">
+                                    </div>
+                                    <div class="list__cell-info">
+                                        <a href="">Faver coffee UOB</a>
+                                        <div class="list__cell-project">38824<span>AA</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list__cell list__cell--md-col flex-grow__3">
+                                Expected day until repayment (30%)
+                                <div class="progress__wrap">
+                                    <div class="progress__line" style="width: 30%;"></div>
+                                </div>
+                                Scheduled date of return in Offer: 20.03.2022
+                            </div>
+                            <div class="list__cell tac" data-title="Investment">€ 7850</div>
+                            <div class="list__cell tac" data-title="Rate (p.a.)">17%</div>
+                            <div class="list__cell tac" data-title="Term (days)">18 days</div>
+                            <a href="" class="list__btn">Stage</a>
+                            <a href="" class="list__btn">Sell</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <h3>Subscribe to our newsletter</h3>
+            <div class="form__wrap">
+                <form class="form subscribe">
+                    <input type="text" name="email" placeholder="Enter your email">
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+            <div class="footer__sep"></div>
+            <div class="footer__row">
+                <div class="footer__col">
+                    <img src="assets/img/logo__element.svg" class="footer__logo" alt="Inlendo">
+                </div>
+                <div class="footer__col">
+                    <div class="footer__title">Inlendo</div>
+                    <a href="" class="footer__link">About us</a>
+                    <a href="" class="footer__link">Loan originators</a>
+                    <a href="" class="footer__link">Blog</a>
+                    <a href="" class="footer__link">News & updates</a>
+                    <a href="" class="footer__link">Annual reports</a>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__title">Legal</div>
+                    <a href="" class="footer__link">User terms</a>
+                    <a href="" class="footer__link">Privacy policy</a>
+                    <a href="" class="footer__link">General loan terms</a>
+                    <a href="" class="footer__link">Cookie policy</a>
+                    <a href="" class="footer__link">Policy of avoidance</a>
+                    <a href="" class="footer__link">Investor risk statement</a>
+                    <a href="" class="footer__link">Lemon Way - T&C</a>
+                    <a href="" class="footer__link">Legal opinion</a>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__title">Help Center</div>
+                    <a href="" class="footer__link">FAQ</a>
+                    <a href="" class="footer__link">Privacy policy</a>
+                    <a href="" class="footer__link">General loan terms</a>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__title">Company details</div>
+                    <a href="" class="footer__link">Legal address:</a>
+                    <span class="footer__link">Registration number</span>
+                </div>
+            </div>
+            <div class="footer__sep"></div>
+            <div class="footer__text">
+                <b>Payment operator</b><br>
+                Partner of <a href="">Lemon Way</a>, a European payment institution accredited in France by the ACPR (CIB 16568).<br>
+                <img src="assets/img/lemonway.svg" alt="Lemonway">
+            </div>
+            <div class="footer__sep"></div>
+            <div class="footer__row">
+                Copyright © Inlendo 2022
+                <div class="footer__socials">
+                    <a href="" class="footer__social">
+                        <img src="assets/img/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="" class="footer__social">
+                        <img src="assets/img/facebook.svg" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
