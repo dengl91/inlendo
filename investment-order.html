@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inlendo - My Projects</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="node_modules/air-datepicker/air-datepicker.css"> <!-- temporary implementation -->
+    <link rel="stylesheet" href="assets/css/common.css">
+
+    <script src="node_modules/air-datepicker/air-datepicker.js"></script> <!-- temporary implementation -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="container">
+            <strong>€</strong>10,000.00
+            &nbsp;
+            &nbsp;
+            James Hutchinson, EU095714 (Investor)
+        </div>
+    </div>
+
+    <header class="header simple">
+        <div class="container">
+            <a href="/">
+                <img src="assets/img/logo-dark.svg" alt="Inlendo">
+                <nav>
+                    <a href="">Dashboard</a>
+                    <a href="">Invest</a>
+                    <a href="" class="active">My projects</a>
+                    <a href="">My finances</a>
+                    <a href="">Deposit/Withdraw</a>
+                    <div class="header__submenu">
+                        <span class="header__btn">
+                            <img src="assets/img/icons/mail.svg">
+                        </span>
+                        <span class="header__btn">
+                            <img src="assets/img/icons/bell.svg">
+                        </span>
+                        <span class="header__btn header__btn--lang">EN</span>
+                    </div>
+                </nav>
+                <div class="menu">
+                    <div class="menu__item"></div>
+                    <div class="menu__item"></div>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section>
+            <div class="container">
+                <div class="investment__item main">
+                    <div class="investment__inner">
+                        <div class="investment__title">Investment authorisation order No ID AB12345</div>
+                        <div class="investment__close"></div>
+                    </div>
+                    <div class="investment__inner">
+                        <div class="investment__text">From Investor with the  ID DDD678 to AS Inlendo, Reg.No. 40203329997</div>
+                        <div class="investment__text">Dated 20.12.2021</div>
+                    </div>
+                </div>
+                <div class="investment__row">
+                    <div class="investment__col">
+                        <div class="investment__item">
+                            <div class="investment__title">Investment project terms summary</div>
+                            <div class="investment__sep"></div>
+                            <div class="investment__inner">
+                                <div class="investment__text">Project ID No:</div>
+                                <div class="investment__text"><b>ID Nr 12345SIA</b></div>
+                            </div>
+                            <div class="investment__inner">
+                                <div class="investment__text">Borrower:</div>
+                                <div class="investment__text"><b>ABC</b></div>
+                            </div>
+                            <div class="investment__inner">
+                                <div class="investment__text">Interest rate:</div>
+                                <div class="investment__text"><b>12% p.a.</b></div>
+                            </div>
+                            <div class="investment__inner">
+                                <div class="investment__text">Loan term:</div>
+                                <div class="investment__text"><b>3 months</b></div>
+                            </div>
+                            <div class="investment__inner">
+                                <div class="investment__text">Fundraising closing date: </div>
+                                <div class="investment__text"><b>1 jan 2022</b></div>
+                            </div>
+                            <div class="investment__sep"></div>
+                            <div class="investment__subtext">By issuing this Order, I, Investor number No DDD678, confirm the acceptance of the entirety of offers and conditions enclosed in the Investment Project No ID Nr 12345, as specified in this Order below, and authorize Inlendo A / S to transfer funds to the Borrower in the amount specified below.</div>
+                            <a href="" class="investment__link">Key Investment Information sheet</a>
+                        </div>
+                    </div>
+                    <div class="investment__col">
+                        <div class="investment__item">
+                            <div class="investment__title">Your investment</div>
+                            <div class="investment__balance">Your avaliable balance <span>€ 10,000</span></div>
+                            <input type="number" class="investment__binput" value="1000">
+                            <div class="investment__sep"></div>
+                            <fieldset>
+                                <legend><abbr title="required">*</abbr> this amount will be drawn from your Inlendo account and reserved for this project until the Fundraising closing date, when, upon successful closing, the money will be transferred to the Borrower, or returned to your Inlendo account if the Project is not fully funded.</legend>
+                                <ul>
+                                    <li>
+                                        <label for="doc1">
+                                            <input type="checkbox" id="doc1" checked>
+                                            agree to the <span>DOCUMENT 2</span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="doc2">
+                                            <input type="checkbox" id="doc2">
+                                            agree to the <span>DOCUMENT 2</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+                <div class="investment__item main">
+                    <div class="investment__inner">
+                        <div class="investment__div">
+                            <div class="investment__title">Authorisation via sms</div>
+                            <div class="investment__subtext">In order to proceed we will need your authorisation via sms by inserting the sms code in the form below. Your Phone number is: <a href="tel:+123 4567 8900" class="investment__link">+123 4567 8900</a></div>
+                        </div>
+                        <div class="investment__div">
+                            <div class="investment__wrap">
+                                <div class="investment__btn">Request code</div>
+                                <input type="text" class="investment__code" placeholder="0000" maxlength="4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="investment__item main">
+                    <div class="investment__inner">
+                        <div class="investment__subtext">By accepting this Order I agree and confirm that  I understand and accept the risks associated with this investment as outlined below, and want to proceed. By accepting this Order I confirm and agree with the terms and authorise Inlendo to transfer funds.</div>
+                        <div class="investment__btn accept">Accept and invest</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content">
+            <div class="container">
+                <h2>Disclaimers and risk warnings:</h2>
+                <h4>Disclaimer:</h4>
+                <p>‘This crowdfunding offer has been neither verified nor approved by competent authorities or the European Securities and Markets Authority (ESMA). The appropriateness of your experience and knowledge have not necessarily been assessed before you were granted access to this investment. By making this investment, you assume full risk of taking this investment, including the risk of partial or entire loss of the money invested.’</p>
+                <h4>Risk warnings:</h4>
+                <p>‘Investment in this crowdfunding project entails risks, including the risk of partial or entire loss of the money invested. Your investment is not covered by the deposit guarantee schemes established in accordance with Directive 2014/49/EU of the European Parliament and of the Council (*). Nor is your investment covered by the investor compensation schemes established in accordance with Directive 97/9/EC of the European Parliament and of the Council (**). You may not receive any return on your investment. This is not a savings product and we advise you not to invest more than 10 % of your net worth in crowdfunding projects. You may not be able to sell the investment instruments when you wish. If you are able to sell them, you may nonetheless incur losses.</p>
+                <h4>Pre-contractual reflection period for non-sophisticated investors:</h4>
+                <p>According to the Crowdfunding Regula, non-sophisticated investors have a right to a pre-contractual reflection period,  during which you may, at any time, revoke your offer to invest or expression of interest in this crowdfunding offer without giving a reason and without incurring a penalty. The duration of the reflection period is 4 calendar days, and starts at the moment when you make the investment. If, during this time, you would like to revoke your investment in this project, please click “REVOKE MY INVESTMENT” under your Investor cabinet.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <h3>Subscribe to our newsletter</h3>
+            <div class="form__wrap">
+                <form class="form subscribe">
+                    <input type="text" name="email" placeholder="Enter your email">
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+            <div class="footer__sep"></div>
+            <div class="footer__row">
+                <div class="footer__col">
+                    <img src="assets/img/logo__element.svg" class="footer__logo" alt="Inlendo">
+                </div>
+                <div class="footer__col">
+                    <div class="footer__title">Inlendo</div>
+                    <a href="" class="footer__link">About us</a>
+                    <a href="" class="footer__link">Loan originators</a>
+                    <a href="" class="footer__link">Blog</a>
+                    <a href="" class="footer__link">News & updates</a>
+                    <a href="" class="footer__link">Annual reports</a>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__title">Legal</div>
+                    <a href="" class="footer__link">User terms</a>
+                    <a href="" class="footer__link">Privacy policy</a>
+                    <a href="" class="footer__link">General loan terms</a>
+                    <a href="" class="footer__link">Cookie policy</a>
+                    <a href="" class="footer__link">Policy of avoidance</a>
+                    <a href="" class="footer__link">Investor risk statement</a>
+                    <a href="" class="footer__link">Lemon Way - T&C</a>
+                    <a href="" class="footer__link">Legal opinion</a>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__title">Help Center</div>
+                    <a href="" class="footer__link">FAQ</a>
+                    <a href="" class="footer__link">Privacy policy</a>
+                    <a href="" class="footer__link">General loan terms</a>
+                </div>
+                <div class="footer__col">
+                    <div class="footer__title">Company details</div>
+                    <a href="" class="footer__link">Legal address:</a>
+                    <span class="footer__link">Registration number</span>
+                </div>
+            </div>
+            <div class="footer__sep"></div>
+            <div class="footer__text">
+                <b>Payment operator</b><br>
+                Partner of <a href="">Lemon Way</a>, a European payment institution accredited in France by the ACPR (CIB 16568).<br>
+                <img src="assets/img/lemonway.svg" alt="Lemonway">
+            </div>
+            <div class="footer__sep"></div>
+            <div class="footer__row">
+                Copyright © Inlendo 2022
+                <div class="footer__socials">
+                    <a href="" class="footer__social">
+                        <img src="assets/img/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="" class="footer__social">
+                        <img src="assets/img/facebook.svg" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

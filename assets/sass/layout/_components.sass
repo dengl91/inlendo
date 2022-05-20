@@ -62,6 +62,332 @@
     :first-child
         margin: var(--btn__offset)
 
+.title
+    &__big
+        margin: 80px 0
+        h1
+            font-family: $poppins
+            font-size: 56px
+            font-weight: 700
+            padding: 0 0 24px 0
+            position: relative
+            span
+                background: var(--blue)
+                background: $grad
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+            &::after
+                content: 'Questions...'
+                font-size: 144px
+                color: #F4F4F4
+                line-height: 1
+                position: absolute
+                top: 0
+                left: 0
+                z-index: -1
+    &__search
+        width: 100%
+        max-width: 480px
+        font-size: 16px
+        line-height: 64px
+        letter-spacing: 0.04em
+        background: url(../img/search.svg) no-repeat 24px 50% var(--gray)
+        border: none
+        border-radius: 16px
+        padding: 0 42px 0 64px
+
+.faq
+    &__wrap
+        width: 100%
+        font-family: $poppins
+        display: flex
+    &__side
+        width: 280px
+        flex: 0 0 280px
+        padding: 0 120px 0 0
+    &__nav
+        color: #6E7191
+        font-weight: 600
+        text-align: center
+        line-height: 64px
+        border-radius: 16px
+        position: relative
+        cursor: pointer
+        &.active
+            color: #fff
+            background: $grad
+            &::after
+                content: ''
+                width: 8px
+                height: 8px
+                background: #fff
+                border-radius: 50%
+                position: absolute
+                left: 50%
+                bottom: 10px
+                transform: translateX(-50%)
+    &__group
+        display: none
+        &.active
+            display: block
+    &__item
+        border-radius: 16px
+        box-shadow: 0 10px 10px #00000040
+        margin: 0 0 24px 0
+    &__question
+        font-family: $poppins
+        font-size: 18px
+        color: #fff
+        font-weight: 600
+        line-height: 64px
+        background: $grad
+        border: 2px solid transparent
+        border-radius: 16px
+        padding: 0 24px
+        position: relative
+        cursor: pointer
+        &::after
+            content: ''
+            width: 24px
+            height: 24px
+            background: url(../img/plus.svg) no-repeat 50%
+            position: absolute
+            top: 50%
+            right: 24px
+            transform: translateY(-50%)
+        &.active
+            color: var(--text)
+            background: #fff
+            border: 2px solid var(--blue)
+            border-bottom: none
+            border-radius: 16px 16px 0 0
+            &::after
+                background: url(../img/minus.svg) no-repeat 50%
+            + [class$=answer]
+                max-height: unset
+                border: 2px solid var(--blue)
+                border-top: none
+                border-radius: 0 0 16px 16px
+                padding: 0 24px 24px 24px
+    &__answer
+        max-height: 0px
+        font-family: 'Lora', sans-serif
+        color: #4E4B66
+        line-height: 32px
+        padding: 0 24px
+        overflow: hidden
+
+.chart
+    &__wrap
+        display: flex
+    &__info
+        width: 50%
+    &__title
+        font-family: $poppins
+        font-size: 26px
+        font-weight: 700
+        text-align: center
+        line-height: 38px
+    &__subtitle
+        font-size: 18px
+        color: #7C828A
+        text-align: center
+        margin: 0 0 32px 0
+    &__pie
+        width: 180px
+        height: 180px
+        border-radius: 50%
+        margin: 0 auto
+        position: relative
+    &__value
+        color: #fff
+        font-weight: 600
+        line-height: 24px
+        position: absolute
+        top: 80px
+        right: 28px
+        z-index: 1
+    &__legend
+        margin: 0 0 16px 0
+    &__line-bg
+        height: 8px
+        background: #C5CDD8
+        border-radius: 6px
+    &__line
+        height: 8px
+        background: var(--blue)
+        border-radius: 6px
+        &--blue-pale
+            background: var(--blue__pale)
+        &--green-pale
+            background: var(--green__pale)
+        &--green
+            background: var(--green)
+        &--purple-deep
+            background: var(--purple__deep)
+    &__graph
+        width: 50%
+        padding: 0 40px
+    &__legend
+        [class$=row]
+            margin: 0 0 8px 0
+            span
+                &:first-child
+                    color: #7C828A
+                &:last-child
+                    font-weight: 700
+
+.stage
+    &__thead
+        font-weight: 700
+        text-align: center
+        display: flex
+        padding: 0 16px
+        margin: 0 0 8px 0
+        span
+            flex: 1 1 0
+            padding: 0 10px
+            &:first-child
+                flex: 0.5 1 0
+            &:nth-child(3)
+                flex: 2 1 0
+            &:last-child
+                flex: 4 1 0
+    &__row
+        font-size: 15px
+        text-align: center
+        line-height: 24px
+        border: 2px solid var(--blue)
+        border-right-color: var(--green)
+        border-bottom-color: var(--green)
+        border-radius: 16px
+        box-shadow: 0 4px 18px #00000080
+        display: flex
+        padding: 12px 16px
+        margin: 0 0 24px 0
+        &:last-child
+            margin: 0
+        span
+            display: flex
+            flex: 1 1 0
+            align-items: center
+            justify-content: center
+            padding: 0 8px
+            &:first-child
+                font-size: 12px
+                color: #fff
+                line-height: 40px
+                border-radius: 24px
+                flex: 0.5 1 0
+                align-self: center
+                &.approved
+                    background: var(--green)
+                &.pending
+                    color: var(--text)
+                    background: #F9F13A
+                &.declined
+                    background: #FC5C5C
+            &:nth-child(3)
+                border-left: 1px solid var(--text)
+                border-right: 1px solid var(--text)
+                flex: 2 1 0
+            &:last-child
+                flex: 4 1 0
+
+.doc
+    &__title
+        font-family: $poppins
+        font-size: 30px
+        color: var(--text)
+        font-weight: 700
+        margin: 0 0 16px 0
+
+    &__row
+        text-align: center
+        border: 2px solid var(--blue)
+        border-right-color: var(--green)
+        border-bottom-color: var(--green)
+        border-radius: 16px
+        display: flex
+        padding: 12px 16px
+        margin: 0 0 24px 0
+        span
+            flex: 1 1 0
+            padding: 0 8px
+            &:nth-child(2)
+                color: var(--blue)
+                border-left: 1px solid var(--text)
+                border-right: 1px solid var(--text)
+                flex: 2 1 0
+            &:last-child
+                flex: 4 1 0
+    &__thead
+        font-weight: 700
+        border: none
+        padding: 0 16px
+        margin: 0 0 4px 0
+        span
+            color: var(--text) !important
+            padding: 0 10px
+            border: none !important
+
+fieldset
+    border: none
+    padding: 0
+    margin: 0
+    -webkit-appearance: none
+    ul
+        list-style-type: none
+        padding: 0
+        margin: 0
+        li
+            &::after
+                display: none
+    legend
+        font-size: 14px
+        line-height: 20px
+        margin: 0 0 16px 0
+        opacity: 0.9
+        span
+            color: var(--green)
+    label
+        font-size: 14px
+        display: flex
+        align-items: center
+        cursor: pointer
+        span
+            font-weight: 700
+            margin: 0 4px
+    input
+        width: 32px
+        height: 32px
+        background: #D9DBE9
+        border-radius: 50%
+        margin: 0 8px 0 0
+        -webkit-appearance: none
+        &:checked
+            background: url(../img/check.svg) no-repeat 50% #fff
+
+.breadcrumbs
+    margin: 52px 0 46px 0
+    .container
+        display: flex
+        align-items: center
+    &__back
+        width: 48px
+        height: 48px
+        background: url(../img/back.svg) no-repeat 0 50%
+    &__title
+        font-family: $poppins
+        font-size: 32px
+        font-weight: 700
+        line-height: 48px
+        span
+            background: var(--blue)
+            background: $grad
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+
 .card
     font-size: 14px
     color: #7f7f7f
@@ -983,6 +1309,12 @@
                     line-height: 44px
                     padding: 0 34px
 
+    .title
+        &__big
+            h1
+                &::after
+                    font-size: 14vw
+
     .card
         border-radius: 10px
         &__img
@@ -1046,10 +1378,44 @@
         min-width: 200px
         text-align: center
         padding: 0 24px
-
     .btns
         :first-child
             margin: 0 10px 0 0
+
+    .title
+        &__big
+            margin: 32px 0
+            h1
+                font-size: 24px
+                line-height: 42px
+                margin: 0
+
+    .breadcrumbs
+        margin: 24px 0 40px 0
+        .container
+            justify-content: center
+        &__title
+            font-size: 24px
+
+    .faq
+        &__wrap
+            flex-direction: column
+        &__side
+            width: 100%
+            display: flex
+            flex: 0 0 100%
+            padding: 0
+            margin: 0 0 24px 0
+            overflow: auto
+        &__nav
+            white-space: nowrap
+            padding: 0 24px
+        &__question
+            font-size: 14px
+            line-height: 32px
+            padding: 10px 64px 10px 24px
+        &__answer
+            font-size: 14px
 
     .card
         &__slider
@@ -1165,3 +1531,45 @@
                 &::after
                     width: 16px
                     height: 16px
+
+    .chart
+        &__wrap
+            flex-wrap: wrap
+        &__info
+            width: 100%
+            margin: 0 0 16px 0
+        &__graph
+            width: 100%
+
+    .stage
+        &__thead
+            display: none
+        &__row
+            flex-direction: column
+            align-items: center
+            span
+                &:first-child
+                    margin: 0 0 10px 0
+                &:nth-child(3)
+                    border: none
+                    border-top: 1px solid var(--text)
+                    border-bottom: 1px solid var(--text)
+                    padding: 10px
+                    margin: 10px 0
+
+    .doc
+        &__title
+            font-size: 16px
+            line-height: 24px
+        &__thead
+            display: none
+        &__row
+            line-height: 20px
+            flex-direction: column
+            span
+                &:nth-child(2)
+                    border: none
+                    border-top: 1px solid var(--text)
+                    border-bottom: 1px solid var(--text)
+                    padding: 10px
+                    margin: 10px 0

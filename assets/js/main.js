@@ -21,6 +21,11 @@ $( document ).ready(function() {
         $('.' + target).eq(index).addClass('active');
     });
 
+    $('[data-amount]').on('click', function() {
+        let value = $(this).data('amount');
+        $(this).closest('form').find('input[type=number]').val(value);
+    });
+
     $('.select__all').on('click', function() {
         if ( $(this).closest('.select__dropdown').find('input:checkbox:not(:checked)').length > 0 ) {
             $(this).addClass('active');
@@ -72,6 +77,21 @@ $( document ).ready(function() {
         });
 
         $('.list__rows').html(result);
+    });
+
+    $('.project__gallery').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
     });
 
 });

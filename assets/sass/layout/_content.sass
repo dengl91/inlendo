@@ -1,0 +1,137 @@
+// 
+// Theme Name: New Clean Template
+// _content.sass
+//
+// app/sass/layout/
+//
+
+.content
+    h2
+        font-size: 24px
+        text-align: left
+        line-height: 36px
+        margin: 0 0 32px 0
+    h4
+        font-family: $poppins
+        font-size: 16px
+        color: var(--text)
+        font-weight: 700
+        text-align: left
+        margin: 32px 0 16px 0
+    p
+        font-size: 14px
+        line-height: 20px
+    &__read
+        max-height: 200px
+        position: relative
+        overflow: hidden
+        &.active
+            max-height: unset
+            &::after
+                display: none
+        &::after
+            content: ''
+            width: 100%
+            height: 100%
+            background: linear-gradient(#ffffff00, #ffffff)
+            position: absolute
+            top: 0
+            left: 0
+        p
+            font-size: 16px
+    &__readmore
+        font-size: 20px
+        text-decoration: underline
+        margin: 32px 0 40px 0
+        cursor: pointer
+        &:last-child
+            margin-bottom: 0
+
+.in
+    &__wrap
+        color: var(--text)
+        background: #f2f2f2
+        border: 2px solid var(--blue)
+        border-radius: 16px
+        padding: 32px 120px
+        margin: 0 0 24px 0
+        &:last-child
+            margin: 0
+    &__row
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin: 0 0 16px 0
+        &--start
+            justify-content: flex-start
+        span
+            padding: 0 24px
+            &:first-child
+                padding-left: 0
+            &:last-child
+                text-align: right
+                padding-right: 0
+    &__title
+        font-size: 32px
+        line-height: 34px
+        margin: 0 16px
+    &__blue
+        color: var(--blue)
+    &__sep
+        height: 64px
+    &__description
+        margin: 32px 0 0 0
+    &__thead
+        font-family: $poppins
+        font-weight: 600
+        span
+            &:first-child
+                transform: translateX(-90px)
+    &__flarge
+        font-size: 18px
+        span
+            text-align: right
+            flex: 1 1 0
+            &:first-child
+                text-align: left
+                flex: 3 1 0
+    &__result
+        font-weight: 700
+
+@media (max-width: 992px)
+    .in
+        &__wrap
+            padding: 32px
+        &__thead
+            span
+                &:first-child
+                    transform: none
+
+@media (max-width: 768px)
+    .content
+        h2
+            margin: 0 0 24px 0
+        &__readmore
+            font-size: 16px
+
+    .in
+        &__wrap
+            background: none
+            border: none
+            border-radius: 0
+            padding: 0
+            overflow: auto
+        &__title
+            margin: 8px 0
+        &__row
+            align-items: flex-start
+            &--start
+                flex-direction: column
+                align-items: center
+        &__sep
+            height: 16px
+        &__flarge
+            font-size: 14px
+            line-height: 20px
+            span
+                min-width: 100px
