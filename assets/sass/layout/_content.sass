@@ -11,6 +11,11 @@
         text-align: left
         line-height: 36px
         margin: 0 0 32px 0
+    h3
+        font-family: $poppins
+        font-size: 16px
+        font-weight: 700
+        margin: 0 0 16px 0
     h4
         font-family: $poppins
         font-size: 16px
@@ -19,6 +24,49 @@
         text-align: left
         margin: 32px 0 16px 0
     p
+        font-size: 14px
+        line-height: 18px
+        a
+            color: var(--blue)
+            text-decoration: underline
+    &__row
+        max-width: 1080px
+    &__subtitle
+        font-size: 20px
+        font-weight: 700
+        text-align: center
+        line-height: 30px
+        margin: 0 0 30px 0
+    &__logo
+        margin: 0 auto 80px auto
+        display: block
+    &__text
+        max-width: 420px
+        height: 100%
+        color: var(--text__light)
+        line-height: 24px
+        background: url(../img/text-bg.svg) no-repeat 50% 0%
+        padding: 10px 0
+        :nth-child(4n) &
+            background: url(../img/text2-bg.svg) no-repeat 50% 0%
+        &--about
+            font-size: 21px
+            color: var(--text__green)
+            line-height: 36px
+            display: flex
+            align-items: center
+            padding: 0 0 40px 0
+            opacity: 0
+            transform: translateY(-40px)
+            transition: 0.8s
+            &.animated
+                opacity: 1
+                transform: translateY(0)
+    &__img
+        max-width: 100%
+        height: auto
+        margin: 0 0 40px 0
+    > p
         font-size: 14px
         line-height: 20px
     &__read

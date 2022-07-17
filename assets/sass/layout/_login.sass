@@ -1,0 +1,81 @@
+// 
+// Theme Name: New Clean Template
+// _login.sass
+//
+// app/sass/layout/
+//
+
+.s-login
+    background: url(../img/invest__bg.svg) no-repeat 50%
+    background-size: cover
+    padding: 100px 0 40px 0
+    margin: 0
+    transition: 0.3s
+    &.active
+        background: url(../img/invest__bg--alt.svg) no-repeat 50%
+        background-size: cover
+        .form
+            input
+                &[type=checkbox]
+                    &:checked
+                        background: url(../img/icons/check.svg) no-repeat 50% var(--green)
+            button
+                background: $grad
+            &__hint
+                a
+                    color: var(--green)
+    &--login
+        background: url(../img/login__bg.svg) no-repeat 50%
+        background-size: cover
+        .form
+            input
+                &[type=email]
+                    background: url(../img/icons/email-g.svg) no-repeat 24px 50% #fff
+                &[type=password]
+                    background: url(../img/icons/lock-g.svg) no-repeat 24px 50% #fff
+    .form
+        max-width: 400px
+        margin: 0 auto
+    h1
+        font-family: $poppins
+        font-size: 76px
+        color: #fff
+        font-weight: 700
+        text-align: center
+        line-height: normal
+        margin: 48px 0
+    &__tabs
+        max-width: 400px
+        font-family: $poppins
+        color: #fff
+        font-weight: 600
+        line-height: 64px
+        background: #D9DBE9
+        border-radius: 40px
+        display: flex
+        margin: 0 auto 48px auto
+    &__tab
+        width: 50%
+        color: #B0B0B0
+        text-align: center
+        cursor: pointer
+        &.active
+            color: #fff
+            background: var(--blue)
+            border-radius: 32px
+            &:last-child
+                background: var(--green)
+
+@media (max-width: 992px)
+    .s-login
+        h1
+            font-size: 60px
+
+@media (max-width: 768px)
+    .s-login
+        h1
+            font-size: 24px
+            margin: 32px 0
+        &__tabs
+            line-height: 40px
+            margin: 0 0 32px 0

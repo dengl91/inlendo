@@ -14,6 +14,15 @@
     &.active
         background: url(../img/invest__bg--alt.svg) no-repeat 50%
         background-size: cover
+    &__title
+        font-family: $poppins
+        font-size: 56px
+        color: #fff
+        font-weight: 700
+        text-align: center
+        margin: 0 0 48px 0
+        span
+            color: var(--purple__deep)
     h2
         font-family: 'Lora', serif
         font-size: 24px
@@ -21,10 +30,21 @@
         line-height: normal
         margin: 0 0 16px 0
     h3
-        font-family: 'Poppins', sans-serif
+        font-family: $poppins
         font-size: 48px
         line-height: 64px
         margin: 0 0 32px 0
+    &__subtitle
+        font-family: $poppins
+        font-size: 32px
+        font-weight: 600
+        margin: 0 0 16px 0
+    &__text
+        p
+            margin: 0 0 48px 0
+            a
+                font-weight: 700
+                text-decoration: underline
 
 .how-it-works
     &__img
@@ -46,20 +66,38 @@
     background-size: cover
     padding: 48px 0
     margin: 0 0 48px 0
+    h2
+        span
+            color: var(--purple__deep)
     &__img
         margin: 0 auto 48px auto
         display: block
     &__description
         max-width: 720px
-        line-height: 24px
+        line-height: 26px
         margin: 0 auto
+        + .btns
+            margin-top: 40px
 
 @media (max-width: 768px)
     .invest
+        &__title
+            font-size: 24px
         h3
             font-size: 24px
             line-height: 32px
             margin: 0 0 24px 0
+        &__subtitle
+            font-size: 16px
+        &__text
+            font-size: 14px
+            line-height: 24px
+            p
+                margin: 0 0 32px 0
+            &:last-child
+                p
+                    &:last-child
+                        margin: 0
 
     .freedom
         h2
@@ -69,3 +107,5 @@
 
     .together
         margin: 0 0 32px 0
+        &__description
+            text-align: center

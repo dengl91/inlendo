@@ -1,0 +1,46 @@
+// 
+// Theme Name: New Clean Template
+// _entry.sass
+//
+// app/sass/layout/
+//
+
+.entry
+    max-width: 920px
+    background: #fff
+    border: 2px solid var(--blue)
+    border-radius: 16px
+    box-shadow: 0 8px 24px #00000080
+    padding: 32px 24px
+    margin: 0 auto
+    &__title
+        max-width: 920px
+        font-weight: 700
+        line-height: normal
+        margin: 0 auto 32px auto
+    &__text
+        margin: 0 0 16px 0
+    .btns
+        width: 100%
+        justify-content: center
+        margin: 32px 0 0 0
+    .btn
+        &--big
+            &.alt
+                color: var(--green)
+                &:hover
+                    color: #fff
+    .form
+        input
+            &[type=text]
+                margin: 0 0 24px 0
+        &__glabel
+            color: var(--text)
+
+@media (max-width: 768px)
+    .entry
+        .btns
+            flex-direction: column
+            :first-child
+                line-height: 44px
+                margin: 0 0 10px 0

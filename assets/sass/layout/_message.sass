@@ -1,0 +1,48 @@
+// 
+// Theme Name: New Clean Template
+// _message.sass
+//
+// app/sass/layout/
+//
+
+.message
+    width: 100%
+    h1
+        font-family: $poppins
+        font-size: 76px
+        text-align: center
+        line-height: normal
+        margin: 0 0 16px 0
+        @media (max-width: 992px)
+            font-size: 60px
+        @media (max-width: 768px)
+            font-size: 24px
+            margin: 0 0 16px 0
+    &__icon
+        margin: 0 auto 32px auto
+        display: block
+    &__text
+        max-width: 600px
+        line-height: 1.5
+        margin: 0 auto 32px auto
+        &.centered
+            text-align: center
+        a
+            font-weight: 600
+            text-decoration: underline
+    &__btn
+        width: 100%
+        max-width: 320px
+        font-family: $poppins
+        color: #fff
+        font-weight: 600
+        text-align: center
+        line-height: 64px
+        background: $grad
+        border-radius: 40px
+        margin: 0 auto
+        display: block
+        &:hover
+            filter: brightness(1.1)
+        @media (max-width: 768px)
+            line-height: 40px

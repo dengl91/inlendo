@@ -1,0 +1,56 @@
+// 
+// Theme Name: New Clean Template
+// _kyc.sass
+//
+// app/sass/layout/
+//
+
+.form
+    &--kyc
+        max-width: 720px
+        padding: 0 0 24px 0
+        margin: 0 auto
+        input
+            margin: 0 0 24px 0
+        label
+            font-weight: 600
+            display: block
+            margin: 0 0 10px 0
+        button
+            &[type=submit]
+                max-width: 330px
+                background: $grad
+                margin: 0 auto
+                @media (max-width: 768px)
+                    max-width: 100%
+                    line-height: 58px
+        fieldset
+            margin: 0 0 24px 0
+            legend
+                font-size: 16px
+                font-weight: 700
+                line-height: 1.5
+                margin: 0 0 32px 0
+            ul
+                li
+                    label
+                        font-weight: 700
+                        line-height: 32px
+                        background: #fff
+                        border-radius: 40px
+                        box-shadow: 0 8px 18px #00000033
+                        display: flex
+                        padding: 16px 24px
+                        margin: 0 0 24px 0
+                        input
+                            width: 32px
+                            height: 32px
+                            background: #D9DBE9
+                            border-radius: 50%
+                            box-shadow: none
+                            padding: 0
+                            margin: 0 24px 0 0
+                            &:checked
+                                background: $grad
+                                border: 1px solid var(--blue)
+                                box-shadow: 0 0 0 4px #fff inset
