@@ -24,6 +24,10 @@
         border-radius: 20px
         padding: 24px
         margin: 0 1.2% 0 0
+        position: relative
+        z-index: 1
+        &.active
+            border-radius: 20px 20px 0 0
     &__header
         font-size: 24px
         line-height: 24px
@@ -54,6 +58,24 @@
         display: block
         &:hover
             background: var(--blue)
+    &__subitem
+        width: 100%
+        font-family: 'Lora', sans-serif
+        font-weight: 400
+        background: $grad
+        line-height: 42px
+        border-radius: 0 0 20px 20px
+        padding: 10px 24px
+        display: none
+        position: absolute
+        top: 100%
+        left: 0
+    &__item.active &__subitem
+        display: block
+    &__subrow
+        display: flex
+        align-items: center
+        justify-content: space-between
 
 .invest
     &__content

@@ -77,6 +77,15 @@ section
         &:last-of-type
             margin-bottom: 0
 
+.row
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -15px
+
+.col-33
+    width: 33.33%
+    padding: 0 15px
+
 [class$=img]
     img
         width: 100%
@@ -177,7 +186,7 @@ i
     100%
         opacity: 1
         transform: translateY(0)
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+        clip-path: polygon(0 0, 100% 0, 120% 120%, 0% 120%)
 
 .slick
     &-list
@@ -394,6 +403,9 @@ i
         font-size: 14px
         &.unscroll
             overflow: hidden
+
+    [class^=col]
+        width: 100%
         
     section
         margin: 40px 0

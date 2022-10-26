@@ -362,7 +362,7 @@
 fieldset
     border: none
     padding: 0
-    margin: 0
+    margin: 0 0 24px 0
     -webkit-appearance: none
     ul
         list-style-type: none
@@ -536,6 +536,7 @@ fieldset
         border-radius: 20px
         box-shadow: 0 10px 10px #00000040
         padding: 15px
+        margin-bottom: 30px
         overflow: hidden
     &__img
         height: 258px
@@ -552,8 +553,160 @@ fieldset
     &__description
         margin: 0 0 20px 0
     .btn
+        max-width: 240px
         text-align: center
+        margin: 0 auto
         display: block
+
+.hero
+    &__item
+        display: flex
+        background: #fff
+        box-shadow: 0 10px 20px #00000040
+        border-radius: 20px
+        margin: 0 0 30px 0
+        &--single
+            border-radius: 20px 20px 0 0
+            box-shadow: none
+            margin: 0 -24px
+        &--single
+            .hero
+                &__img
+                    img
+                        border-radius: 20px 0 0 0
+                &__content
+                    border-bottom: 1px solid #00000030
+    &__img
+        flex: 0 0 460px
+        img
+            border-radius: 20px 0 0 20px
+    &__content
+        display: flex
+        flex-direction: column
+        padding: 24px
+        position: relative
+    &__date
+        font-size: 14px
+        color: var(--blue)
+        margin: 0 0 10px 0
+    &__title
+        font-family: $poppins
+        font-size: 36px
+        font-weight: 700
+        line-height: 40px
+        margin: 0 0 24px 0
+    &__description
+        line-height: 1.5
+    &__sep
+        height: 1px
+        background: #00000033
+        margin: 24px 0
+    &__share
+        font-family: $poppins
+        font-weight: 700
+        display: flex
+        align-items: center
+        position: absolute
+        right: 24px
+        bottom: 24px
+        cursor: pointer
+    &__icon
+        width: 38px
+        height: 38px
+        background: url(../img/icons/share--w.svg) no-repeat 50%, $grad3
+        border-radius: 50%
+        margin: 0 0 0 8px
+
+.post
+    &__content
+        border-radius: 20px
+        box-shadow: 0 10px 20px #00000040
+        padding: 0 24px
+        overflow: hidden
+        h2
+            font-family: $poppins
+            font-size: 36px
+            font-weight: 800
+            text-align: left
+            line-height: normal
+            margin: 0 0 24px 0
+    &__p
+        margin: 24px 0
+    &__img
+        margin: 24px -24px 32px -24px
+        span
+            text-align: center
+            margin: 10px 0
+            display: block
+    &__sep
+        height: 1px
+        background: #00000030
+        margin: 48px -24px 20px -24px
+    &__footer
+        display: flex
+        justify-content: center
+        padding: 0 0 24px 0
+        position: relative
+    &__top
+        font-family: $poppins
+        font-size: 30px
+        font-weight: 700
+        line-height: 56px
+        display: flex
+        align-items: center
+        cursor: pointer
+    &__icon
+        width: 32px
+        height: 32px
+        background: url(../img/icons/top.svg) no-repeat 50%
+        margin: 0 0 0 4px
+    &__share
+        display: flex
+        background: $grad3
+        border-radius: 40px
+        padding: 16px 8px
+        position: absolute
+        top: 0px
+        right: 0
+        a
+            width: 24px
+            height: 24px
+            margin: 0 8px
+
+.pagination
+    display: flex
+    justify-content: center
+    margin: 24px 0
+    &__item
+        width: 54px
+        height: 54px
+        font-family: $poppins
+        font-size: 20px
+        font-weight: 700
+        display: flex
+        align-items: center
+        justify-content: center
+        background: #fff
+        border-radius: 50%
+        box-shadow: 0 4px 10px #0000001a
+        margin: 0 4px
+        cursor: pointer
+        &.active, &:hover
+            color: #fff
+            background: $grad3
+
+.author
+    display: flex
+    margin: auto 0 0 0
+    &__img
+        height: 38px
+        flex: 0 0 38px
+        margin: 0 8px 0 0
+    &__title
+        font-family: $poppins
+        font-weight: 700
+    &__date
+        font-size: 10px
 
 .form
     &__wrap
@@ -562,7 +715,6 @@ fieldset
         margin: 0 0 48px 0
     label
         margin: 0 0 8px 0
-        display: block
     input
         width: 100%
         font-family: 'Lora', sans-serif
@@ -595,25 +747,42 @@ fieldset
             -webkit-appearance: none
             &:checked
                 background: url(../img/icons/check.svg) no-repeat 50% var(--purple__deep)
+        &[type=file]
+            padding: 0 60px 0 24px
+            cursor: pointer
+            &::file-selector-button
+                display: none
+            &:invalid
+                background: url(../img/icons/doc-g.svg) no-repeat top 50% right 24px #fff
+            &:valid
+                background: url(../img/icons/check--w.svg) no-repeat top 50% right 24px, $grad3
+        &:read-only
+            color: var(--gray)
         &.icon
             &__networth
-                background: url(../img/icons/networth.svg) no-repeat 24px 50%
+                background: url(../img/icons/networth.svg) no-repeat 24px 50% #fff
                 padding: 0 24px 0 60px
             &__percent
-                background: url(../img/icons/percent.svg) no-repeat 24px 50%
+                background: url(../img/icons/percent.svg) no-repeat 24px 50% #fff
                 padding: 0 24px 0 60px
             &__user
-                background: url(../img/icons/user.svg) no-repeat 24px 50%
+                background: url(../img/icons/user.svg) no-repeat 24px 50% #fff
                 padding: 0 24px 0 60px
             &__email
-                background: url(../img/icons/email-g--alt.svg) no-repeat 24px 50%
+                background: url(../img/icons/email-g--alt.svg) no-repeat 24px 50% #fff
                 padding: 0 24px 0 60px
             &__phone
-                background: url(../img/icons/phone-g.svg) no-repeat 28px 50%
+                background: url(../img/icons/phone-g.svg) no-repeat 28px 50% #fff
                 padding: 0 24px 0 60px
             &__calendar
                 background: url(../img/icons/calendar-g.svg) no-repeat 24px 50% #fff
                 padding: 0 24px 0 60px
+            &__lock
+                background: url(../img/icons/lock-g--alt.svg) no-repeat 24px 50% #fff
+                padding: 0 24px 0 60px
+            &__doc
+                background: url(../img/icons/doc-g.svg) no-repeat top 50% right 24px #fff
+                padding: 0 60px 0 24px
     textarea
         width: 100%
         height: 190px
@@ -735,11 +904,21 @@ fieldset
                 background: url(../img/icons/uploaded.svg) no-repeat top 50% right 24px, $grad
             input
                 display: none
+    &__row
+        display: flex
+    &__edit
+        font-size: 16px
+        font-weight: 600
+        line-height: 32px
+        background: url(../img/icons/change--w.svg) no-repeat 100% 50%
+        padding: 0 34px 0 0
+        cursor: pointer
     &__group
         max-width: 560px
         margin: 0 auto 24px auto
         position: relative
         label
+            font-weight: 600
             line-height: 24px
             margin: 0 0 8px 0
             display: block
@@ -754,6 +933,20 @@ fieldset
             position: absolute
             top: 30px
             right: 0
+    &__action
+        width: 40%
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        button
+            width: 100%
+            background: $grad3
+            margin: 0 0 0 10px
+            position: unset
+        &--empty
+            margin: 0 !important
+    &--left &__group
+        margin: 0 0 24px 0
 
 .select
     &__custom
@@ -1277,6 +1470,7 @@ fieldset
         align-items: center
         padding: 0 16px
         margin: 0 0 24px 0
+        position: relative
         &--small
             font-size: 12px
             .list
@@ -1284,6 +1478,43 @@ fieldset
                     padding: 0 8px 0 0
                     &:first-child
                         flex: 2 1 0
+                    &.flex-1
+                        flex: 1 1 0
+        &--haschild
+            &.active
+                border-radius: 16px 16px 0 0
+                .list
+                    &__subrows
+                        display: block
+                    &__dropdown
+                        background: url(../img/icons/arrow__up--grad.svg) no-repeat 50%
+    &__subrows
+        width: 100%
+        background: #fff
+        border-radius: 0 0 16px 16px
+        box-shadow: 0 4px 14px #00000040
+        padding: 8px 0
+        display: none
+        position: absolute
+        top: 100%
+        left: 0
+        z-index: 3
+    &__subrow
+        height: 42px
+        display: flex
+        align-items: center
+        padding: 0 16px
+        .list
+            &__row
+                height: 42px
+                background: none
+                box-shadow: none
+                margin: 0
+    &__subcell
+        flex: 1 1 0
+        padding: 0 8px 0 0
+        &:first-child
+            flex: 2 1 0
     &__cell
         flex: 1 1 0
         &.active
@@ -1312,6 +1543,27 @@ fieldset
                 transform: translateY(2px)
         &--grow-3
             flex: 3 1 0
+        &-col
+            font-size: 14px
+            text-align: center
+            display: flex
+            flex-direction: column
+            a
+                color: var(--blue)
+    &__dropdown
+        width: 24px
+        height: 24px
+        background: url(../img/icons/arrow__down--grad.svg) no-repeat 50%
+        margin: 0 0 0 auto
+        cursor: pointer
+    &__status
+        width: 16px
+        height: 16px
+        background: #16CB9C
+        border-radius: 50%
+        margin: 0 auto
+        &--red
+            background: #FC5C5C
     &__btn
         font-size: 16px
         color: #fff
@@ -1344,6 +1596,95 @@ fieldset
         justify-content: space-evenly
         span
             color: var(--green)
+
+.alert
+    display: flex
+    align-items: center
+    border-radius: 16px
+    box-shadow: 0 10px 20px #00000040
+    padding: 24px 40px
+    margin: 0 0 24px 0
+    position: relative
+    overflow: hidden
+    &::after
+        content: ''
+        width: 16px
+        height: 100%
+        background: #FEC022
+        position: absolute
+        top: 0
+        left: 0
+    &--error
+        &::after
+            background: #FF0000
+    &--notification
+        &::after
+            background: #2F87EB
+    &--information
+        &::after
+            background: none
+    &--success
+        &::after
+            background: #87CA81
+    &__icon
+        width: 46px
+        height: 46px
+        font-family: $poppins
+        font-size: 32px
+        color: #fff
+        font-weight: 800
+        text-align: center
+        line-height: 46px
+        background: #FEC022
+        border-radius: 50%
+        margin: 0 24px 0 0
+    &--warning &__icon
+        &::after
+            content: '!'
+    &--error &__icon
+        line-height: 42px
+        background: #FF0000
+        &::after
+            content: 'x'
+    &--information &__icon
+        font-family: revert
+        background: #2F87EB
+        &::after
+            content: 'i'
+    &--success &__icon
+        background: #87CA81
+        &::after
+            content: '+'
+    &__title
+        font-family: $poppins
+        font-size: 24px
+        font-weight: 700
+        line-height: 28px
+    &__date
+        font-size: 12px
+        margin: 0 0 30px 0
+
+.new-messages
+    font-family: $poppins
+    font-size: 24px
+    color: #00000040
+    display: flex
+    align-items: center
+    font-weight: 600
+    margin: 32px 0
+    &::before
+        content: ''
+        width: 32px
+        height: 2px
+        background: #00000040
+        margin: 0 8px 0 0
+    &::after
+        content: ''
+        width: 32px
+        height: 2px
+        flex-grow: 1
+        background: #00000040
+        margin: 0 0 0 8px
 
 .sidebar
     width: 280px
@@ -1512,16 +1853,13 @@ fieldset
         position: relative
         &.active
             color: var(--text)
-            &::after
-                content: ''
-                width: 24px
-                height: 24px
-                background: $grad
-                border-radius: 50%
-                position: absolute
-                top: 110%
-                left: 50%
-                transform: translateX(-50%)
+    &__bullet
+        width: 24px
+        height: 24px
+        background: $grad
+        border-radius: 12px
+        position: absolute
+        transition: 0.4s
 
 .features
     background: url(../img/login__bg.svg) no-repeat 50% / cover
@@ -1755,12 +2093,15 @@ fieldset
 .filter
     width: 100%
     display: flex
+    padding: 0 10px
     margin: 0 0 10px 0
     &--wide
         .filter
             &__item
                 &:first-child
                     flex: 2 1 0
+                &.flex-1
+                    flex: 1 1 0
     &__item
         font-size: 12px
         text-align: center
@@ -1842,6 +2183,9 @@ fieldset
         &__cell
             font-size: 12px
             text-align: center
+            &-col
+                text-align: right
+                padding: 0 0 10px 0
 
     .filter
         padding: 0 10px 0 0
@@ -1938,6 +2282,38 @@ fieldset
         &__subtitle
             font-size: 14px
 
+    .hero
+        &__item
+            flex-wrap: wrap
+        &__img
+            height: 180px
+            flex: 0 0 100%
+            img
+                border-radius: 20px 20px 0 0
+        &__title
+            font-size: 24px
+
+    .post
+        &__content
+            h2
+                font-size: 16px
+        &__top
+            font-size: 16px
+            line-height: 24px
+            margin: 16px 0 0 0
+        &__footer
+            flex-wrap: wrap
+            align-items: center
+            flex-direction: column-reverse
+        &__share
+            position: unset
+
+    .pagination
+        &__item
+            width: 32px
+            height: 32px
+            font-size: 16px
+
     .teams
         &__content
             max-width: 210px
@@ -2013,6 +2389,18 @@ fieldset
             button
                 width: 100%
                 position: unset
+        &__row
+            flex-direction: column-reverse
+        &__action
+            width: auto
+            margin: -34px 0 10px 0
+            button
+                width: 40%
+                line-height: 32px
+                margin: -4px 0 0 0
+        &__edit
+            font-size: 14px
+            background-size: 24px
 
     .subscribe
         input[type=text]
@@ -2070,6 +2458,15 @@ fieldset
             width: 25%
             flex: auto
             padding: 0 0 10px 0
+
+    .alert
+        padding: 20px 30px
+        &__icon
+            height: 40px
+            line-height: 40px
+            flex: 0 0 40px
+        &--error &__icon
+            line-height: 38px
 
     .sidebar
         width: 100%

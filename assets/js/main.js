@@ -4,7 +4,7 @@ $( document ).ready(function() {
         inline: true
     });
 
-    var form_datepickers = document.querySelectorAll('.form__datepicker');
+    const form_datepickers = document.querySelectorAll('.form__datepicker');
 
     form_datepickers.forEach((form_datepicker) => {
         new AirDatepicker(form_datepicker, {
@@ -41,6 +41,50 @@ $( document ).ready(function() {
     $('[data-amount]').on('click', function() {
         let value = $(this).data('amount');
         $(this).closest('form').find('input[type=number]').val(value);
+    });
+
+    $('[data-read]').on('click', function() {
+        let prop = $(this).closest('.form').find('input').prop('readonly');
+        $(this).closest('.form').find('input').attr('readonly', !prop).select();
+    });
+
+    $('.dash__btn').on('click', function(e) {
+        e.preventDefault();
+        $(this).closest('.dash__item').toggleClass('active');
+    });
+
+    $('.list__rows').on('click', '.list__dropdown', function() {
+        $(this).closest('.list__row--haschild').toggleClass('active');
+    });
+
+    $('.bignav__item.active').attr('data-current', 1);
+    $('.bignav').append('<div class="bignav__bullet"></div>');
+    if( $('.bignav__bullet').length ){
+        $('.bignav__bullet').css('left', $('.bignav__item.active').offset().left + $('.bignav__item.active').width() / 2 + 12 + 'px');
+    }
+
+    $('.bignav__item').on('mouseover', function() {
+        let dir = 'prev';
+        if( $(this).prev() && $(this).prev().attr('data-current') == 1 ){
+            dir = 'next';
+        }
+        console.log(dir);
+        $('.bignav__item').attr('data-current', 0);
+        $(this).attr('data-current', 1);
+        
+        const cX = $(this).offset().left + $(this).width() / 2 + 12;
+        if( dir == 'prev' ){
+            $('.bignav__bullet').css('left', cX + 'px');
+            $('.bignav__bullet').css('width', $(this).width() / 2 + $(this).next().width() / 2 + 24 + 'px');
+        } else {
+            $('.bignav__bullet').css('width', $(this).width() / 2 + $(this).prev().width() / 2 + 48 + 'px');
+        }
+        setTimeout(() => {
+            $('.bignav__bullet').css('width', '24px');
+            if( dir == 'next' ){
+                $('.bignav__bullet').css('left', cX + 'px');
+            }
+        }, 400);
     });
 
     $('.select__all').on('click', function() {

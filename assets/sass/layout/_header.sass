@@ -94,6 +94,22 @@
             line-height: 42px
             padding: 0 15px
 
+#logo
+    &:hover
+        #logo_el
+            transform: translateX(calc(100% - 24px))
+        #logo_o
+            opacity: 0
+        #logo_i, #logo_n, #logo_l, #logo_e, #logo_n, #logo_d
+            fill: url(#logo_gradient)
+
+#logo_el
+    transition: 0.4s
+#logo_o
+    transition: 0.6s
+#logo_i, #logo_n, #logo_l, #logo_e, #logo_n, #logo_d
+    transition: 0.4s
+
 @media (max-width: 1140px)
     .header
         nav
